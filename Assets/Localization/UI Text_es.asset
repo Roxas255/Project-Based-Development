@@ -34,6 +34,14 @@ MonoBehaviour:
     m_Localized: Idioma
     m_Metadata:
       m_Items: []
+  - m_Id: 1479510616150016
+    m_Localized: Seleccionar idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1481889243697152
+    m_Localized: Ajuste de volumen
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
