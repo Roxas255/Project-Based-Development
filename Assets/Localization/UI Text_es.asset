@@ -42,6 +42,10 @@ MonoBehaviour:
     m_Localized: Ajuste de volumen
     m_Metadata:
       m_Items: []
+  - m_Id: 2898675793104896
+    m_Localized: El Objectivo
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

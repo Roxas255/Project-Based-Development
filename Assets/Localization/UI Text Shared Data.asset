@@ -39,6 +39,10 @@ MonoBehaviour:
     m_Key: volume setting
     m_Metadata:
       m_Items: []
+  - m_Id: 2898675793104896
+    m_Key: objective
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
