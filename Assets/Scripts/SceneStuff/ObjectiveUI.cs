@@ -8,6 +8,7 @@ public class ObjectiveUI : MonoBehaviour
 
     [TextArea]
     [SerializeField]
+    //Objective text message 
     private string levelObjective =
         "Fix the Lights.";
 
@@ -16,7 +17,7 @@ public class ObjectiveUI : MonoBehaviour
         objectivePopup.SetActive(false);
         objectiveText.text = levelObjective;
     }
-
+    //When objective button is pressed
     public void ToggleObjective()
     {
         objectivePopup.SetActive(!objectivePopup.activeSelf);
