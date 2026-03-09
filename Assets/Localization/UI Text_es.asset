@@ -50,6 +50,10 @@ MonoBehaviour:
     m_Localized: 'Tarea: Haz clic en las flechas para conectar los tubos con el final'
     m_Metadata:
       m_Items: []
+  - m_Id: 5817376909529088
+    m_Localized: terminar
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -47,6 +47,10 @@ MonoBehaviour:
     m_Key: Instructions
     m_Metadata:
       m_Items: []
+  - m_Id: 5817376909529088
+    m_Key: finish
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
