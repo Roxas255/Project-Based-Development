@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: objective
     m_Metadata:
       m_Items: []
+  - m_Id: 5816135139692544
+    m_Key: Instructions
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
