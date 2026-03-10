@@ -3,31 +3,50 @@ using UnityEngine.InputSystem;
 
 public class CaulkScript : MonoBehaviour
 {
-    public Texture2D caulkTexture;
-    public bool isHolding = false;
-    void Start()
-    {
-    }
+    public GameObject thing;
+    public LineRenderer LR;
+    public Camera cam;
+    public Vector2 lastPos;
 
     void Update()
     {     
-        Vector2 screenPos = Mouse.current.position.ReadValue();
-        Vector2 worldPoint = Camera.main.ScreenToWorldPoint(screenPos);
-        Collider2D hitCollider = Physics2D.OverlapPoint(worldPoint);
-
-        if(Input.GetKey(KeyCode.Mouse0) && isHolding)
-        {
-            //caulk stuff here
-        }
-        if(Input.GetKeyUp(KeyCode.Mouse0) && isHolding)
-        {
-            //stop caulking stuff here
-        }
+        Draw();
     }
-    
-    public void ChangeCursor()
-    {            
-        Cursor.SetCursor(caulkTexture, Vector2.zero, CursorMode.Auto);
-        isHolding = true;
+    public void CreateThing()
+    {
+        GameObject thingy = Instantiate(thing);
+        LR = thingy.GetComponent<LineRenderer>();
+        
+        Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        LR.SetPosition(0, mousePos);
+        LR.SetPosition(1, mousePos);
+    }
+    void AddPoint(Vector2 pointPos)
+    {
+        LR.positionCount++;
+        int positionIndex = LR.positionCount - 1;
+        LR.SetPosition(positionIndex, pointPos);
+    }
+    public void Draw()
+    {
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            CreateThing();
+        }
+
+        if(Input.GetKey(KeyCode.Mouse0))
+        {
+            Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            if (mousePos != lastPos)
+            {
+                AddPoint(mousePos);
+                lastPos = mousePos;
+            }
+        }
+        else
+        {
+            LR = null;
+        }
+
     }
 }
