@@ -1,13 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CaulkScript : MonoBehaviour
+public class WindowSealer : MonoBehaviour
 {
     public GameObject thing;
     public LineRenderer LR;
     public Camera cam;
     public Vector2 lastPos;
+    public bool isDrawing = false;
+    public static WindowSealer instance;
 
+    void Start()
+    {
+        instance = this;
+    }
     void Update()
     {     
         Draw();
@@ -36,6 +42,7 @@ public class CaulkScript : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Mouse0))
         {
+            isDrawing = true;
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             if (mousePos != lastPos)
             {
@@ -45,6 +52,7 @@ public class CaulkScript : MonoBehaviour
         }
         else
         {
+            isDrawing = false;
             LR = null;
         }
 

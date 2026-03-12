@@ -1,11 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class WindowScript : MonoBehaviour
 {
     public float timer = 60;
     public float currentTime;
-    private static WindowScript instance;
+    public static WindowScript instance;
     public bool gameStarted = false;
+    public bool gameFinished = false;
     public void Start()
     {
         currentTime = timer;
@@ -17,27 +19,27 @@ public class WindowScript : MonoBehaviour
         {
             gameStarted = true;
             //start timer
-            //StartCoroutine(Timer());
+            StartCoroutine(Timer());
         }
         
         //game logic
-        while (gameStarted)
+        if (gameStarted)
         {
             
         }
 
     }
-    //IEnumerator Timer()
-    //{
-        //while (currentTime > 0)
-        //{
-      //      currentTime -= Time.deltaTime;
-            //yield return null;
-        //}
-        //if (currentTime <= 0)
-        //{
-          //  Debug.Log("Game finished");
-            ////game finished
-        //}   
-    //}
+    private IEnumerator Timer()
+    {
+        while (currentTime > 0)
+        {
+            currentTime -= Time.deltaTime;
+            yield return null;
+        }
+        if (currentTime <= 0)
+        {
+            gameFinished = true;
+            Debug.Log("Game finished");
+        }   
+    }
 }

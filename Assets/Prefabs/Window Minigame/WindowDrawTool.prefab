@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9076746566373282766}
   - component: {fileID: 8257989485138865595}
   m_Layer: 0
-  m_Name: Thingy
+  m_Name: WindowDrawTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
