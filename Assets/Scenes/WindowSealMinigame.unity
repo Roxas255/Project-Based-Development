@@ -480,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WindowScript
   timer: 60
   currentTime: 0
+  timerFillImage: {fileID: 2051624400}
   gameStarted: 0
   gameFinished: 0
 --- !u!114 &110119735
@@ -1051,6 +1052,7 @@ GameObject:
   - component: {fileID: 1420378818}
   - component: {fileID: 1420378817}
   - component: {fileID: 1420378816}
+  - component: {fileID: 1420378819}
   m_Layer: 5
   m_Name: Finish Button
   m_TagString: Untagged
@@ -1160,6 +1162,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420378814}
   m_CullTransparentMesh: 1
+--- !u!114 &1420378819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420378814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db02d10e7c7746141bc84572d14d4080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneButton
+  targetScene: Level 1
 --- !u!1 &1601747618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,6 +1187,7 @@ GameObject:
   - component: {fileID: 1601747622}
   - component: {fileID: 1601747621}
   - component: {fileID: 1601747620}
+  - component: {fileID: 1601747623}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -1281,6 +1297,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601747618}
   m_CullTransparentMesh: 1
+--- !u!114 &1601747623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601747618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db02d10e7c7746141bc84572d14d4080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneButton
+  targetScene: Level 1
 --- !u!1 &1681802442
 GameObject:
   m_ObjectHideFlags: 0

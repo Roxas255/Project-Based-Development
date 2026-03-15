@@ -1,10 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WindowScript : MonoBehaviour
 {
     public float timer = 60;
     public float currentTime;
+    public Image timerFillImage;
     public static WindowScript instance;
     public bool gameStarted = false;
     public bool gameFinished = false;
@@ -25,7 +27,8 @@ public class WindowScript : MonoBehaviour
         //game logic
         if (gameStarted)
         {
-            
+            float TimerPercent = Mathf.Clamp01(currentTime / timer);
+            timerFillImage.fillAmount = TimerPercent;
         }
 
     }
