@@ -20,6 +20,7 @@ public class WindowSealer : MonoBehaviour
     }
     public void CreateThing()
     {
+        //creates the line renderer and sets the first point to where the mouse is
         GameObject thingy = Instantiate(thing);
         LR = thingy.GetComponent<LineRenderer>();
         
@@ -29,12 +30,14 @@ public class WindowSealer : MonoBehaviour
     }
     void AddPoint(Vector2 pointPos)
     {
+        //adds a point to the line renderer and sets it to where the mouse is
         LR.positionCount++;
         int positionIndex = LR.positionCount - 1;
         LR.SetPosition(positionIndex, pointPos);
     }
     public void Draw()
     {
+        //creates the sealer line when you hold down the mouse
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             CreateThing();
@@ -42,6 +45,7 @@ public class WindowSealer : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Mouse0))
         {
+            //if you are holding down the mouse, it adds points to the line renderer as you move the mouse
             isDrawing = true;
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             if (mousePos != lastPos)
@@ -52,6 +56,7 @@ public class WindowSealer : MonoBehaviour
         }
         else
         {
+            //turns off the line renderer when you let go of the mouse
             isDrawing = false;
             LR = null;
         }

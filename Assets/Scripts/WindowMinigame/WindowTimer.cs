@@ -2,15 +2,5 @@ using UnityEngine;
 
 public class WindowTimer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //I think I might use this later for the clock once i get the actual art so that its easier to see things. 
 }
