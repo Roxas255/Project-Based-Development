@@ -25,13 +25,16 @@ public class WindowLogic : MonoBehaviour
     public float maxSealSpeed;
     //how fast you lose points when moving too fast
     public float maxSpeedPenaltyRate;
+    public float speedPointsLoss = 0;
     private Vector3 lastMousePosition;
     private float currentMouseSpeed;
     [Header("Score")]
+    public float pointsPerSeal;
     public float CurrentScore = 0f;
     public float FinalScore;
     public TextMeshProUGUI accuracyText;
     private float timer = 0f;
+    
     void Start()
     {
         unsealedPoints = new List<Transform>(WindowPoints);
@@ -102,7 +105,7 @@ public class WindowLogic : MonoBehaviour
         if (minDistanceToGoal < 0.2f && closestPoint != null)
         {
             unsealedPoints.Remove(closestPoint);
-            CurrentScore += 2f; 
+            CurrentScore += pointsPerSeal; 
         }
     }
 
@@ -115,6 +118,7 @@ public class WindowLogic : MonoBehaviour
             losingPoints = true;
             CurrentScore -= Time.deltaTime * HighPenaltyRate; 
             Debug.Log("<color=red>LOSING EVEN MORE POINTS!</color>");
+            WindowScript.instance.timer -= Time.deltaTime * speedPointsLoss;
         }
         //loses points if you are somewhat far from a seal
         else if (distanceToPoint > LowErrorMargin)
@@ -122,6 +126,8 @@ public class WindowLogic : MonoBehaviour
             losingPoints = true;
             CurrentScore -= Time.deltaTime * LowPenaltyRate; 
             Debug.Log("<color=red>LOSIKNG POINTS!</color>");
+            WindowScript.instance.timer -= Time.deltaTime * speedPointsLoss;
+
         }
         //turns off the losing points variable if you are touching a seal
         else
