@@ -17,6 +17,7 @@ public class WindowScript : MonoBehaviour
     }
     void Update()
     {
+        //starts the game when you click and starts the timer
         if (Input.GetKeyDown(KeyCode.Mouse0) && !gameStarted)
         {
             gameStarted = true;
@@ -24,7 +25,7 @@ public class WindowScript : MonoBehaviour
             StartCoroutine(Timer());
         }
         
-        //game logic
+        //updates the timer fill image to show how much time is left
         if (gameStarted)
         {
             float TimerPercent = Mathf.Clamp01(currentTime / timer);
@@ -34,11 +35,16 @@ public class WindowScript : MonoBehaviour
     }
     private IEnumerator Timer()
     {
+        //this is temporary bc i need to transfer it to the window timer script.
+
+        //timer thingy that decreases and finishes at 0
         while (currentTime > 0)
         {
             currentTime -= Time.deltaTime;
             yield return null;
         }
+        /////////!!!////////////
+        //i need to set up the finish panel that displayed your final score and stuff. 
         if (currentTime <= 0)
         {
             gameFinished = true;
