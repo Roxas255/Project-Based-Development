@@ -10,6 +10,8 @@ public class WindowSealer : MonoBehaviour
     public bool isDrawing = false;
     public static WindowSealer instance;
 
+    public GameObject DrawingSegment;
+
     void Start()
     {
         instance = this;
@@ -21,8 +23,9 @@ public class WindowSealer : MonoBehaviour
     public void CreateThing()
     {
         //creates the line renderer and sets the first point to where the mouse is
-        GameObject thingy = Instantiate(thing);
-        LR = thingy.GetComponent<LineRenderer>();
+        DrawingSegment = Instantiate(thing);
+        LR = DrawingSegment.GetComponent<LineRenderer>();
+        DrawingSegment.AddComponent<InsulationScript>();
         
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         LR.SetPosition(0, mousePos);
