@@ -34,10 +34,11 @@ public class WindowLogic : MonoBehaviour
     public float FinalScore;
     public TextMeshProUGUI accuracyText;
     private float timer = 0f;
-    
+    public static WindowLogic instance;
     void Start()
     {
         unsealedPoints = new List<Transform>(WindowPoints);
+        instance = this;
     }
 
     void Update()

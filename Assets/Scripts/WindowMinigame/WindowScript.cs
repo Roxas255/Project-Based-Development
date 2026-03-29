@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WindowScript : MonoBehaviour
@@ -35,7 +36,7 @@ public class WindowScript : MonoBehaviour
     }
     private IEnumerator Timer()
     {
-        //this is temporary bc i need to transfer it to the window timer script.
+        Scene currentScene = SceneManager.GetActiveScene();
 
         //timer thingy that decreases and finishes at 0
         while (currentTime > 0)
@@ -48,6 +49,23 @@ public class WindowScript : MonoBehaviour
         if (currentTime <= 0)
         {
             gameFinished = true;
+            if (currentScene.name == "Window1")
+            {
+                GameManager.instance.WindowMinigameComplete = true;
+                GameManager.instance.windowScore = WindowLogic.instance.FinalScore;
+            }
+            if (currentScene.name == "Insulation1")
+            {
+                GameManager.instance.InsulationMinigameComplete = true;
+                GameManager.instance.insulationScore = WindowLogic.instance.FinalScore;
+            }
+            //actually i dont think we need this but im keeping this here bc i might forget
+            if (currentScene.name == "Pipe1")
+            {
+                GameManager.instance.PipeMinigameComplete = true;
+                //we have to make a scoring thing for the pipe minigame. 
+                // GameManager.instance.pipeScore = PipeLogic?.instance.FinalScore;
+            }
             Debug.Log("Game finished");
         }   
     }
