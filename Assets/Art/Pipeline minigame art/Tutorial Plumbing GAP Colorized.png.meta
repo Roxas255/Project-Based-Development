@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a0c14d6184b5d204dadfe1262c1a9a71
+guid: 5a3bc124015b9e5479d0a02756bdde67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1450362272007796229
-    second: Straight pipe_0
+      213: 7137815977764428368
+    second: Tutorial Plumbing GAP Colorized_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Straight pipe_0
+      name: Tutorial Plumbing GAP Colorized_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf9c85da2374fdbe0800000000000000
-      internalID: -1450362272007796229
+      spriteID: 05a91c260dd9e0360800000000000000
+      internalID: 7137815977764428368
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Straight pipe_0: -1450362272007796229
+      Tutorial Plumbing GAP Colorized_0: 7137815977764428368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

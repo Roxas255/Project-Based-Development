@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 51f21f9fe3f995046832ff0640027b9c
+guid: c84b3bbc17d6dda4ab4b59f0d7a0df84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6445269714307161179
-    second: Cross pipe_0
+      213: -9137509830542344331
+    second: Down & Right Pipe Colorized_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cross pipe_0
+      name: Down & Right Pipe Colorized_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 9
+        y: 9
+        width: 37
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a36325e75dcd86a0800000000000000
-      internalID: -6445269714307161179
+      spriteID: 57f32e2c83b013180800000000000000
+      internalID: -9137509830542344331
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cross pipe_0: -6445269714307161179
+      Down & Right Pipe Colorized_0: -9137509830542344331
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

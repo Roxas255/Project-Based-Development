@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e86e90174fe43c54c95c79f1759c5d4e
+guid: e38a005d4b9baba47b767f44ea34931b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4661140738119237708
-    second: Corner pipe_0
+      213: 515595931864015394
+    second: tPipe Colorized_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Corner pipe_0
+      name: tPipe Colorized_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 46
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4003b73ec2bfa040800000000000000
-      internalID: 4661140738119237708
+      spriteID: 222246ea4c3c72700800000000000000
+      internalID: 515595931864015394
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Corner pipe_0: 4661140738119237708
+      tPipe Colorized_0: 515595931864015394
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
