@@ -5,10 +5,10 @@ public class Scoreboardbuttons : MonoBehaviour
 {
     public void RetryLevel()
     {
-        // Reload the current level
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        string lastLevel = PlayerPrefs.GetString("LastLevel", "Level 1");
+        SceneManager.LoadScene(lastLevel);
     }
-    // Go back to Main Menu
+
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("Main Menu");
