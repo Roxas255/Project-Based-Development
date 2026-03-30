@@ -7,7 +7,7 @@ public class PipeChecker : MonoBehaviour
     public Image[] tiles;
     public Sprite[] correctSprites;
     public Timer timer;
-
+    public GameObject FinishButton;
     public void CheckPuzzle()
     {
         if (tiles.Length != 24 || correctSprites.Length != 24)
@@ -30,6 +30,14 @@ public class PipeChecker : MonoBehaviour
         if (timer != null)
         {
             timer.StopTimer();
+        }
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "Pipe1")
+        {
+            GameManager.instance.PipeMinigameComplete = true;
+
+            
+            FinishButton.SetActive(true);
         }
 
         SceneManager.LoadScene("Level 1");
