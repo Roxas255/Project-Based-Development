@@ -1,30 +1,41 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class Timer : MonoBehaviour
 {
     public Sprite[] frames;
     public Image image;
 
-    public float timePerFrame = 10f; // 10 second duration
+    public float timePerFrame = 6f;
+    public float maxTime = 60f;
 
     private int currentFrame = 0;
-    private float timer = 0f;
+    private float frameTimer = 0f;
+    private float totalTimer = 0f;
+
+    private bool timerStopped = false;
 
     void Start()
-    {     // frame starts at 0
-        if (frames.Length > 0)
+    {
+        if (frames.Length > 0 && image != null)
         {
             image.sprite = frames[0];
         }
     }
 
     void Update()
-    {   // tracks real time and will change frame after 10 seconds 
-        timer += Time.deltaTime; 
+    {
+        if (timerStopped)
+            return;
 
-        if (timer >= timePerFrame)
+        totalTimer += Time.deltaTime;
+        frameTimer += Time.deltaTime;
+
+        // Change clock frame every 10 seconds
+        if (frameTimer >= timePerFrame)
         {
-            timer = 0f;
+            frameTimer = 0f;
             currentFrame++;
 
             if (currentFrame < frames.Length)
@@ -32,5 +43,17 @@ public class Timer : MonoBehaviour
                 image.sprite = frames[currentFrame];
             }
         }
+
+        // Fail after 60 seconds
+        if (totalTimer >= maxTime)
+        {
+            Debug.Log("Time Up! Minigame failed.");
+            SceneManager.LoadScene("Level 1");
+        }
+    }
+
+    public void StopTimer()
+    {
+        timerStopped = true;
     }
 }

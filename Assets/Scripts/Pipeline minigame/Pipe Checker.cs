@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PipeChecker : MonoBehaviour
 {
     public Image[] tiles;
     public Sprite[] correctSprites;
+    public Timer timer;
 
     public void CheckPuzzle()
     {
@@ -18,17 +20,18 @@ public class PipeChecker : MonoBehaviour
         {
             if (tiles[i].sprite != correctSprites[i])
             {
-                string currentName = tiles[i].sprite != null ? tiles[i].sprite.name : "NULL";
-                string correctName = correctSprites[i] != null ? correctSprites[i].name : "NULL";
-
-                Debug.Log("Wrong path at index " + i +
-                          " | Tile = " + tiles[i].gameObject.name +
-                          " | Current = " + currentName +
-                          " | Expected = " + correctName);
+                Debug.Log("Wrong path");
                 return;
             }
         }
 
         Debug.Log("Correct path! +15 points");
+
+        if (timer != null)
+        {
+            timer.StopTimer();
+        }
+
+        SceneManager.LoadScene("Level 1");
     }
 }

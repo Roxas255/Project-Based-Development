@@ -2197,7 +2197,8 @@ MonoBehaviour:
   - {fileID: -104658983, guid: 9c314946003de4140bb93a5d08643a66, type: 3}
   - {fileID: 229021896296931525, guid: 9c314946003de4140bb93a5d08643a66, type: 3}
   image: {fileID: 2066153016}
-  timePerFrame: 10
+  timePerFrame: 6
+  maxTime: 60
 --- !u!1 &2075507210 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6374929487112743050, guid: 863503b8e12f0224bb0ea711cf9d9440, type: 3}
@@ -2265,6 +2266,7 @@ MonoBehaviour:
   - {fileID: 4859650404293087595, guid: fe7017ff87ecd1d43924e2ef4a90b2c7, type: 3}
   - {fileID: 515595931864015394, guid: e38a005d4b9baba47b767f44ea34931b, type: 3}
   - {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  timer: {fileID: 0}
 --- !u!114 &2098517029 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 852305510799183211, guid: 863503b8e12f0224bb0ea711cf9d9440, type: 3}
