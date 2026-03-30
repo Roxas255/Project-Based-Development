@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 110119735}
   - component: {fileID: 110119734}
   m_Layer: 0
-  m_Name: Window
+  m_Name: LogicStuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -345,6 +345,7 @@ MonoBehaviour:
   timerFillImage: {fileID: 2051624400}
   gameStarted: 0
   gameFinished: 0
+  finishButton: {fileID: 1420378814}
 --- !u!114 &110119735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,7 +808,7 @@ GameObject:
   - component: {fileID: 857937910}
   - component: {fileID: 857937909}
   m_Layer: 0
-  m_Name: L6-Simple window problem_0
+  m_Name: WindowArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1087,7 +1088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1420378815
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1151,7 +1152,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1420378817}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1420378819}
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: FindSceneScript
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1420378817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,7 +1299,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1601747621}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1601747623}
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: FindSceneScript
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1601747621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1920,8 +1945,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 410052298}
+  - {fileID: 110119733}
+  - {fileID: 1848168033}
+  - {fileID: 857937910}
   - {fileID: 1391439515}
   - {fileID: 10421040}
-  - {fileID: 1848168033}
-  - {fileID: 110119733}
-  - {fileID: 857937910}

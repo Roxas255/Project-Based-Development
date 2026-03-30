@@ -11,6 +11,8 @@ public class WindowScript : MonoBehaviour
     public static WindowScript instance;
     public bool gameStarted = false;
     public bool gameFinished = false;
+
+    public GameObject finishButton;
     public void Start()
     {
         currentTime = timer;
@@ -53,11 +55,13 @@ public class WindowScript : MonoBehaviour
             {
                 GameManager.instance.WindowMinigameComplete = true;
                 GameManager.instance.windowScore = WindowLogic.instance.FinalScore;
+                finishButton.SetActive(true);
             }
             if (currentScene.name == "Insulation1")
             {
                 GameManager.instance.InsulationMinigameComplete = true;
                 GameManager.instance.insulationScore = WindowLogic.instance.FinalScore;
+                finishButton.SetActive(true);
             }
             //actually i dont think we need this but im keeping this here bc i might forget
             if (currentScene.name == "Pipe1")
@@ -65,6 +69,7 @@ public class WindowScript : MonoBehaviour
                 GameManager.instance.PipeMinigameComplete = true;
                 //we have to make a scoring thing for the pipe minigame. 
                 // GameManager.instance.pipeScore = PipeLogic?.instance.FinalScore;
+                //finishButton.SetActive(true);
             }
             Debug.Log("Game finished");
         }   
