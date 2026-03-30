@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 13632137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 305650861}
+        m_TargetAssemblyTypeName: Finishbuttonlvl1, Assembly-CSharp
+        m_MethodName: GoToScoreBoard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &13632137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 305650859}
   - component: {fileID: 305650860}
+  - component: {fileID: 305650861}
   m_Layer: 0
   m_Name: UI Manager
   m_TagString: Untagged
@@ -505,6 +518,18 @@ MonoBehaviour:
   objectivePopup: {fileID: 200657027}
   objectiveText: {fileID: 61361688}
   levelObjective: Fix the Lights.
+--- !u!114 &305650861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305650857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265d6c845de07b34695295c7cfc2539f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Finishbuttonlvl1
 --- !u!1001 &305828504
 PrefabInstance:
   m_ObjectHideFlags: 0
