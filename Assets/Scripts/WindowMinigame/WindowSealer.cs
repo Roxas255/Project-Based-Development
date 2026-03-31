@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using NUnit.Framework;
 
 public class WindowSealer : MonoBehaviour
 {
@@ -42,11 +44,17 @@ public class WindowSealer : MonoBehaviour
     {
         //creates the sealer line when you hold down the mouse
         if(Input.GetKeyDown(KeyCode.Mouse0))
-        {
+        {       
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                isDrawing = false;
+                return; // Ignore clicks on UI elements
+            }
+            isDrawing = true;
             CreateThing();
         }
 
-        if(Input.GetKey(KeyCode.Mouse0))
+        if(Input.GetKey(KeyCode.Mouse0) && isDrawing)
         {
             //if you are holding down the mouse, it adds points to the line renderer as you move the mouse
             isDrawing = true;
