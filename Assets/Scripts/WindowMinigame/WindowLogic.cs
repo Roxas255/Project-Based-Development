@@ -58,6 +58,8 @@ public class WindowLogic : MonoBehaviour
             //also subtracts points for moving too fast
             //and subtracts even more points for losing points for too long
             FinalScore = GetFinalScore();
+            PlayerPrefs.SetFloat("WindowScore", FinalScore);
+            PlayerPrefs.Save();
             Debug.Log("Final Score: " + FinalScore);
             WindowScript.instance.gameFinished = false; 
         }
