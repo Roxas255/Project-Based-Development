@@ -34,6 +34,8 @@ public class WindowLogic : MonoBehaviour
     public float CurrentScore = 0f;
     public float FinalScore;
     public TextMeshProUGUI accuracyText;
+    [Header("Score Saving")]
+    public string scoreKey;
     private float timer = 0f;
     public static WindowLogic instance;
     void Start()
@@ -58,7 +60,7 @@ public class WindowLogic : MonoBehaviour
             //also subtracts points for moving too fast
             //and subtracts even more points for losing points for too long
             FinalScore = GetFinalScore();
-            PlayerPrefs.SetFloat("WindowScore", FinalScore);
+            PlayerPrefs.SetFloat(scoreKey, FinalScore);
             PlayerPrefs.Save();
             Debug.Log("Final Score: " + FinalScore);
             WindowScript.instance.gameFinished = false; 

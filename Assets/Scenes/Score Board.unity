@@ -1161,6 +1161,7 @@ GameObject:
   - component: {fileID: 958883409}
   - component: {fileID: 958883408}
   - component: {fileID: 958883411}
+  - component: {fileID: 958883412}
   m_Layer: 5
   m_Name: Rety_button
   m_TagString: Untagged
@@ -1244,6 +1245,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 958883412}
+        m_TargetAssemblyTypeName: Level1Retry, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &958883409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,6 +1307,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db02d10e7c7746141bc84572d14d4080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
+  targetScene: Level 1
+--- !u!114 &958883412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958883406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31309698ffd4e6142a5068434a9f35d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level1Retry
   targetScene: Level 1
 --- !u!1 &993015045
 GameObject:
@@ -1434,6 +1460,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993015045}
   m_CullTransparentMesh: 1
+--- !u!1 &1108103747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1108103749}
+  - component: {fileID: 1108103748}
+  m_Layer: 0
+  m_Name: Score Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1108103748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108103747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccd66c0380b1f74a98a0498e93773dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreDisplay
+  currentScoreText: {fileID: 40668686}
+  bestScoreText: {fileID: 1948996234}
+  windowScoreText: {fileID: 1256004900}
+  pipelineScoreText: {fileID: 1682745829}
+  insulationScoreText: {fileID: 37111690}
+--- !u!4 &1108103749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108103747}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 161.6703, y: 84.18063, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1256004898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1659,7 @@ GameObject:
   - component: {fileID: 1302902539}
   - component: {fileID: 1302902538}
   - component: {fileID: 1302902541}
+  - component: {fileID: 1302902542}
   m_Layer: 5
   m_Name: next_level button
   m_TagString: Untagged
@@ -1667,6 +1743,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1302902542}
+        m_TargetAssemblyTypeName: Level1Retry, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1302902539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,6 +1806,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   targetScene: Level 2
+--- !u!114 &1302902542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302902536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31309698ffd4e6142a5068434a9f35d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level1Retry
+  targetScene: Level 1
 --- !u!1 &1394225660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +1832,7 @@ GameObject:
   - component: {fileID: 1394225663}
   - component: {fileID: 1394225662}
   - component: {fileID: 1394225665}
+  - component: {fileID: 1394225666}
   m_Layer: 5
   m_Name: Main Menu button
   m_TagString: Untagged
@@ -1814,6 +1916,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1394225666}
+        m_TargetAssemblyTypeName: Level1Retry, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1394225663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1865,6 +1979,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   targetScene: Main Menu
+--- !u!114 &1394225666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394225660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31309698ffd4e6142a5068434a9f35d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level1Retry
+  targetScene: Level 1
 --- !u!1 &1443106141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,3 +2759,4 @@ SceneRoots:
   - {fileID: 65763246}
   - {fileID: 414580734}
   - {fileID: 526831643}
+  - {fileID: 1108103749}

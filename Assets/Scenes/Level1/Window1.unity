@@ -446,6 +446,7 @@ MonoBehaviour:
   CurrentScore: 0
   FinalScore: 0
   accuracyText: {fileID: 113277361}
+  scoreKey: WindowScore
   losingPoints: 0
 --- !u!1 &113277359
 GameObject:
