@@ -54,6 +54,30 @@ MonoBehaviour:
     m_Localized: terminar
     m_Metadata:
       m_Items: []
+  - m_Id: 19214923808083968
+    m_Localized: Nivel de reintento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19215198711156736
+    m_Localized: "el men\xFA principal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19215292499988480
+    m_Localized: 'Siguiente nivel
+
+      
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19219293035532288
+    m_Localized: "Auditor\xEDa energ\xE9tica completada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19225858924843008
+    m_Localized: "Mejor puntuaci\xF3n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

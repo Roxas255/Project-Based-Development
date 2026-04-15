@@ -51,6 +51,26 @@ MonoBehaviour:
     m_Key: finish
     m_Metadata:
       m_Items: []
+  - m_Id: 19214923808083968
+    m_Key: retry level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19215198711156736
+    m_Key: main menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19215292499988480
+    m_Key: next level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19219293035532288
+    m_Key: 'energy audit complete '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19225858924843008
+    m_Key: 'best score '
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -54,6 +54,26 @@ MonoBehaviour:
     m_Localized: Finish
     m_Metadata:
       m_Items: []
+  - m_Id: 19214923808083968
+    m_Localized: Retry Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19215198711156736
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19215292499988480
+    m_Localized: 'Next Level '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19219293035532288
+    m_Localized: Energy Audit Complete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19225858924843008
+    m_Localized: 'Best Score '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
