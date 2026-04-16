@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b53b14f2756d08c4c8b1366b42c3a896
+guid: 2e50205bfe33aeb4198741913babfdf8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8124187329091317617
-    second: BE Interior Colorized_0
+      213: -1518332862587162768
+    second: BE Interior IR Colorized_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BE Interior Colorized_0
+      name: BE Interior IR Colorized_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8058c00ba6114f80800000000000000
-      internalID: -8124187329091317617
+      spriteID: 07fa0b25e4ccdeae0800000000000000
+      internalID: -1518332862587162768
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BE Interior Colorized_0: -8124187329091317617
+      BE Interior IR Colorized_0: -1518332862587162768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
