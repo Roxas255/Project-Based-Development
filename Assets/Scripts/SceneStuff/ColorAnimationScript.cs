@@ -6,16 +6,12 @@ public class ColorAnimationScript : MonoBehaviour
 
     void OnEnable()
     {
-            anim.ResetTrigger("StopHighlight");
-            anim.SetTrigger("Highlight");
-            Debug.Log("Highlight");
-        
+        anim.ResetTrigger("StopHighlight");
+        anim.SetTrigger("Highlight");
     }
     void OnDisable()
     {
         anim.ResetTrigger("Highlight");
-            anim.SetTrigger("StopHighlight");
-            Debug.Log("UnHighlight");
-          
+        anim.SetTrigger("StopHighlight");
     }
 }

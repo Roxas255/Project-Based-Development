@@ -14,6 +14,15 @@ public class GameManager : MonoBehaviour
     public float insulationScore;
     public float pipeScore;
 
+
+
+    public bool playedIntro = false;
+    public bool playedThermalIntro = false;
+    public bool playedThermal2 = false;
+    public bool playeedWindowHelp = false;
+    public bool playedWindowHelp2 = false;
+    
+
     void Awake()
     {
         if (instance == null)
@@ -37,6 +46,12 @@ public class GameManager : MonoBehaviour
         {
             CheckMinigamesComplete();
         }
+    }
+
+    void CheckDialoguePlayed()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        
     }
 
     void CheckMinigamesComplete()

@@ -34,8 +34,8 @@ public class Dialouge : MonoBehaviour
     }
     void StartDialogue()
     {
-            index = 0;
-            StartCoroutine(TypeLine());
+        index = 0;
+        StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
@@ -58,7 +58,14 @@ public class Dialouge : MonoBehaviour
         else
         {
             //gameObject.SetActive(false);
-            button.SetActive(true);
+            if (button != null)
+            {
+                button.SetActive(true);
+            }
+            if (button == null)
+            {
+                gameObject.SetActive(false);
+            }
         }
 
     }
