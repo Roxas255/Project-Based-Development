@@ -13,6 +13,8 @@ public class PopupTextScript : MonoBehaviour
     public GameObject WindowQuestionPanel;
     public GameObject WindowInfoPanel;
     public TextMeshProUGUI WindowQuestionText;
+
+    public GameObject AfterWindowGamePopUp;
     void Start()
     {
         if (GameManager.instance.WindowMinigameComplete == false)
@@ -22,7 +24,10 @@ public class PopupTextScript : MonoBehaviour
     }
     void Update()
     {
-        
+        if (GameManager.instance.WindowMinigameComplete && !GameManager.instance.PipeMinigameComplete && !GameManager.instance.InsulationMinigameComplete
+        {
+            AfterWindowGamePopUp.SetActive(true);
+        }
     }
     public void CheckIntroText()
     {
@@ -78,4 +83,7 @@ public class PopupTextScript : MonoBehaviour
         yield return new WaitForSeconds(2f);
         WindowQuestionText.text = ("Where is the defect located?");
     }   
+
+
+    
 }

@@ -38,6 +38,8 @@ public class WindowLogic : MonoBehaviour
     public string scoreKey;
     private float timer = 0f;
     public static WindowLogic instance;
+    
+    public TextMeshProUGUI finalscore;
     void Start()
     {
         unsealedPoints = new List<Transform>(WindowPoints);
@@ -113,6 +115,11 @@ public class WindowLogic : MonoBehaviour
             unsealedPoints.Remove(closestPoint);
             CurrentScore += pointsPerSeal; 
         }
+        //////////////////////////////////////////////////////////////////////
+        if (unsealedPoints.Count == 0)
+        {
+            WindowScript.instance.FinishMinigame();
+        }
     }
 
     public bool losingPoints = false;
@@ -176,6 +183,7 @@ public class WindowLogic : MonoBehaviour
     public float GetFinalScore()
     {
         //returns 0 if there is no score at all, otherwise returns the current score
-        return Mathf.Max(0, CurrentScore);
+        float roundedScore = (float)(Math.Round(CurrentScore * 100f) / 100f);
+        return Mathf.Max(0, roundedScore);
     }
 }

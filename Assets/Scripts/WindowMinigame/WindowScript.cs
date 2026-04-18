@@ -50,12 +50,20 @@ public class WindowScript : MonoBehaviour
         //i need to set up the finish panel that displayed your final score and stuff. 
         if (currentTime <= 0)
         {
-            gameFinished = true;
+            FinishMinigame();
+        }   
+    }
+    public void FinishMinigame()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        gameFinished = true;
             if (currentScene.name == "Window1")
             {
                 GameManager.instance.WindowMinigameComplete = true;
                 GameManager.instance.windowScore = WindowLogic.instance.FinalScore;
                 finishButton.SetActive(true);
+                WindowLogic.instance.finalscore.text = ("Accuracy: " + WindowLogic.instance.FinalScore.ToString("F2") + "%");
+
             }
             if (currentScene.name == "Insulation1")
             {
@@ -72,6 +80,5 @@ public class WindowScript : MonoBehaviour
                 //finishButton.SetActive(true);
             }
             Debug.Log("Game finished");
-        }   
     }
 }
