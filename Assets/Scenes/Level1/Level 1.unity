@@ -4779,6 +4779,7 @@ MonoBehaviour:
   WindowQuestionPanel: {fileID: 764181128}
   WindowInfoPanel: {fileID: 1909205405}
   WindowQuestionText: {fileID: 332355612}
+  AfterWindowGamePopUp: {fileID: 0}
 --- !u!1 &1712502224
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class PopupTextScript : MonoBehaviour
     }
     void Update()
     {
-        if (GameManager.instance.WindowMinigameComplete && !GameManager.instance.PipeMinigameComplete && !GameManager.instance.InsulationMinigameComplete
+        if (GameManager.instance.WindowMinigameComplete && !GameManager.instance.PipeMinigameComplete && !GameManager.instance.InsulationMinigameComplete)
         {
             AfterWindowGamePopUp.SetActive(true);
         }
