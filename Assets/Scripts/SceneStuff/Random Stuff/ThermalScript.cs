@@ -6,8 +6,10 @@ public class ThermalScript : MonoBehaviour
     public GameObject thermal;
 
     public bool check;
+    public static ThermalScript instance;
     void Start()
     {
+        instance = this;
         check = false;
     }
 
