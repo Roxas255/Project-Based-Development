@@ -1701,7 +1701,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8560288733929861289, guid: 5cec10e8bc7d1154097b5240e723c450, type: 3}
+  m_Sprite: {fileID: 7137815977764428368, guid: 5a3bc124015b9e5479d0a02756bdde67, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1946,6 +1946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PipeResults
   checker: {fileID: 2075507213}
+  timer: {fileID: 2066153018}
   resultPanel: {fileID: 617819588}
   titleText: {fileID: 343433451}
   scoreText: {fileID: 162647865}

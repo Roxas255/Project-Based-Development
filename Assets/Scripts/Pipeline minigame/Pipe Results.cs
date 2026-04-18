@@ -7,6 +7,9 @@ public class PipeResults : MonoBehaviour
     [Header("Checker")]
     [SerializeField] private PipeChecker checker;
 
+    [Header("Timer")]
+    [SerializeField] private Timer timer;
+
     [Header("Result UI")]
     [SerializeField] private GameObject resultPanel;
     [SerializeField] private TMP_Text titleText;
@@ -27,6 +30,11 @@ public class PipeResults : MonoBehaviour
 
     public void FinishPipeMinigame()
     {
+        if (timer != null)
+        {
+            timer.StopTimer();
+        }
+
         bool isCorrect = checker.IsPuzzleCorrect();
 
         if (isCorrect)
