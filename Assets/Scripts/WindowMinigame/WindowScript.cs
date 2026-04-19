@@ -70,6 +70,7 @@ public class WindowScript : MonoBehaviour
                 GameManager.instance.InsulationMinigameComplete = true;
                 GameManager.instance.insulationScore = WindowLogic.instance.FinalScore;
                 finishButton.SetActive(true);
+                WindowLogic.instance.finalscore.text = ("Accuracy: " + WindowLogic.instance.FinalScore.ToString("F2") + "%");
             }
             //actually i dont think we need this but im keeping this here bc i might forget
             if (currentScene.name == "Pipe1")

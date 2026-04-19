@@ -3,6 +3,8 @@ using UnityEngine;
 public class Popups2 : MonoBehaviour
 {
     public Animator InsulationButtonAnimator;
+
+    
     void Update()
     {
         if (!GameManager.instance.InsulationMinigameComplete)
