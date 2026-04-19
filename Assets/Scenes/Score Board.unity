@@ -2203,7 +2203,7 @@ MonoBehaviour:
   insulationScoreText: {fileID: 37111690}
   gradeText: {fileID: 2091277002}
   starDisplay: {fileID: 1108103750}
-  Scorepointer: {fileID: 1108103751}
+  scorePointerMover: {fileID: 1108103751}
 --- !u!4 &1108103749
 Transform:
   m_ObjectHideFlags: 0
