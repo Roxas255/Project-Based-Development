@@ -1548,6 +1548,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1909205405}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &316791504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3220,7 +3232,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1710912330}
         m_TargetAssemblyTypeName: PopupTextScript, Assembly-CSharp
-        m_MethodName: QuestionWrong
+        m_MethodName: PipeQuestionWrong
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6025,6 +6037,8 @@ MonoBehaviour:
   WindowQuestionPanel: {fileID: 764181128}
   WindowInfoPanel: {fileID: 1909205405}
   WindowQuestionText: {fileID: 332355612}
+  PipeInfo: {fileID: 171834145}
+  PipeQuestionText: {fileID: 136567420}
   AfterWindowGamePopUp: {fileID: 775147086}
 --- !u!114 &1710912331
 MonoBehaviour:
@@ -6988,7 +7002,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1710912330}
         m_TargetAssemblyTypeName: PopupTextScript, Assembly-CSharp
-        m_MethodName: QuestionWrong
+        m_MethodName: PipeQuestionWrong
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

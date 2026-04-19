@@ -13,6 +13,8 @@ public class PopupTextScript : MonoBehaviour
     public GameObject WindowQuestionPanel;
     public GameObject WindowInfoPanel;
     public TextMeshProUGUI WindowQuestionText;
+    //public GameObject PipeInfo;
+    public TextMeshProUGUI PipeQuestionText;
 
     public GameObject AfterWindowGamePopUp;
     void Start()
@@ -79,12 +81,19 @@ public class PopupTextScript : MonoBehaviour
     }
     public IEnumerator ChangeQuestionText(string newText)
     {
-        WindowInfoPanel.SetActive(true);
         WindowQuestionText.text = newText;
         yield return new WaitForSeconds(2f);
         WindowQuestionText.text = ("Where is the defect located?");
     }   
 
-
-    
+    public void PipeQuestionWrong()
+    {
+        StartCoroutine(ChangeQuestionText2("Incorrect. Try again."));
+    }
+    public IEnumerator ChangeQuestionText2(string newText)
+    {
+        PipeQuestionText.text = newText;
+        yield return new WaitForSeconds(2f);
+        PipeQuestionText.text = ("Where is the defect located?");
+    }   
 }
