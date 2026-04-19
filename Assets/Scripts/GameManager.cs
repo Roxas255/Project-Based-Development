@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
     public bool playedThermal2 = false;
     public bool playeedWindowHelp = false;
     public bool playedWindowHelp2 = false;
-    
 
     void Awake()
     {
