@@ -3,7 +3,8 @@ using UnityEngine;
 public class Popups2 : MonoBehaviour
 {
     public Animator InsulationButtonAnimator;
-
+    public GameObject InsulationButton;
+    public GameObject PipeButton;
     
     void Update()
     {
@@ -21,6 +22,15 @@ public class Popups2 : MonoBehaviour
         else if (GameManager.instance.InsulationMinigameComplete)
         {
             return;
+        }
+
+        if (GameManager.instance.InsulationMinigameComplete)
+        {
+            InsulationButton.SetActive(false);
+        }
+        if (GameManager.instance.PipeMinigameComplete)
+        {
+            PipeButton.SetActive(false);
         }
     }
 }
