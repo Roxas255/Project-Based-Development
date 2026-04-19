@@ -1977,6 +1977,7 @@ MonoBehaviour:
   windowScoreText: {fileID: 1256004900}
   pipelineScoreText: {fileID: 1682745829}
   insulationScoreText: {fileID: 37111690}
+  gradeText: {fileID: 2091277002}
   starDisplay: {fileID: 1108103750}
 --- !u!4 &1108103749
 Transform:
