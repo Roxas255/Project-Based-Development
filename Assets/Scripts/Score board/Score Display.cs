@@ -11,7 +11,7 @@ public class ScoreDisplay : MonoBehaviour
     [SerializeField] private TMP_Text windowScoreText;
     [SerializeField] private TMP_Text pipelineScoreText;
     [SerializeField] private TMP_Text insulationScoreText;
-
+    public StarDisplay starDisplay;
     void Start()
     {
         float windowScore = PlayerPrefs.GetFloat("WindowScore", 0f);
@@ -19,6 +19,8 @@ public class ScoreDisplay : MonoBehaviour
         float insulationScore = PlayerPrefs.GetFloat("InsulationScore", 0f);
 
         float currentScore = windowScore + pipelineScore + insulationScore;
+
+        starDisplay.SetStars((int)currentScore);
 
         float bestScore = PlayerPrefs.GetFloat("BestEnergyAuditScore", 0f);
 
