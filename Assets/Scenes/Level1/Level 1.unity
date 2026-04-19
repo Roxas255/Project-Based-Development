@@ -5441,8 +5441,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Popups2
   InsulationButtonAnimator: {fileID: 1464669694}
-  InsulationButton: {fileID: 0}
-  PipeButton: {fileID: 0}
+  InsulationButton: {fileID: 1464669688}
+  PipeButton: {fileID: 741769718}
 --- !u!1 &1712502224
 GameObject:
   m_ObjectHideFlags: 0
