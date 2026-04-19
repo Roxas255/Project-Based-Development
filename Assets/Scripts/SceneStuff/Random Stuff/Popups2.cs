@@ -8,6 +8,14 @@ public class Popups2 : MonoBehaviour
     
     void Update()
     {
+        if (GameManager.instance.InsulationMinigameComplete)
+        {
+            InsulationButton.SetActive(false);
+        }
+        if (GameManager.instance.PipeMinigameComplete)
+        {
+            PipeButton.SetActive(false);
+        }
         if (!GameManager.instance.InsulationMinigameComplete)
         {
             if (GameManager.instance.WindowMinigameComplete && ThermalScript.instance.check == true)
@@ -22,15 +30,6 @@ public class Popups2 : MonoBehaviour
         else if (GameManager.instance.InsulationMinigameComplete)
         {
             return;
-        }
-
-        if (GameManager.instance.InsulationMinigameComplete)
-        {
-            InsulationButton.SetActive(false);
-        }
-        if (GameManager.instance.PipeMinigameComplete)
-        {
-            PipeButton.SetActive(false);
         }
     }
 }

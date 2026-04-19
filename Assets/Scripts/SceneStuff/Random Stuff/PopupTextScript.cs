@@ -20,6 +20,7 @@ public class PopupTextScript : MonoBehaviour
         if (GameManager.instance.WindowMinigameComplete == false)
         {
             tutorialText.SetActive(true);
+            Debug.Log("Hi");
         }
     }
     void Update()
