@@ -1115,11 +1115,16 @@ MonoBehaviour:
   maxSealSpeed: 16
   maxSpeedPenaltyRate: 5
   speedPointsLoss: 0
+  finalPercentage: 0
+  finalTierPoints: 0
   pointsPerSeal: 0.14880952
   CurrentScore: 0
+  maxPossibleScore: 100
   FinalScore: 0
+  currentScoreText: {fileID: 113277361}
   accuracyText: {fileID: 113277361}
   scoreKey: InsulationScore
+  finalscore: {fileID: 0}
   losingPoints: 0
 --- !u!1 &113277359
 GameObject:

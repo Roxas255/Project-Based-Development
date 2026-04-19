@@ -30,9 +30,13 @@ public class WindowLogic : MonoBehaviour
     private Vector3 lastMousePosition;
     private float currentMouseSpeed;
     [Header("Score")]
+    public float finalPercentage;
+    public float finalTierPoints;
     public float pointsPerSeal;
     public float CurrentScore = 0f;
+    public float maxPossibleScore = 100f;
     public float FinalScore;
+    public TextMeshProUGUI currentScoreText;
     public TextMeshProUGUI accuracyText;
     [Header("Score Saving")]
     public string scoreKey;
@@ -44,6 +48,10 @@ public class WindowLogic : MonoBehaviour
     {
         unsealedPoints = new List<Transform>(WindowPoints);
         instance = this;
+
+        CurrentScore = 0f;
+        maxPossibleScore = WindowPoints.Length * pointsPerSeal;
+
     }
 
     void Update()
@@ -55,24 +63,67 @@ public class WindowLogic : MonoBehaviour
             CheckAccuracy();
             CheckSpeedPenalty();
         }
-        if (WindowScript.instance != null && WindowScript.instance.gameFinished == true)
+
+
+           //final score is calculated by adding up how many seals you have sealed
+           //and subtracts points for moving too far from the seals 
+           //also subtracts points for moving too fast
+           //and subtracts even more points for losing points for too long
+
+        
+            if (WindowScript.instance != null && WindowScript.instance.gameFinished == true)
+            {
+                FinalScore = GetFinalScore();
+
+                if (maxPossibleScore > 0f)
+                {
+                    finalPercentage = (FinalScore / maxPossibleScore) * 100f;
+                }
+                else
+                {
+                    finalPercentage = 0f;
+                }
+
+                finalTierPoints = CalculateTierPoints(finalPercentage);
+
+                PlayerPrefs.SetFloat(scoreKey, finalTierPoints);
+                PlayerPrefs.Save();
+
+                if (accuracyText != null)
+                {
+                    accuracyText.text = "Accuracy: " + finalPercentage.ToString("F0") + "%";
+                }
+
+                if (finalscore != null)
+                {
+                    finalscore.text = "Energy Score Gained: " + finalTierPoints.ToString("F0");
+                }
+
+                Debug.Log("Final Score: " + FinalScore);
+                Debug.Log("Percentage: " + finalPercentage);
+                Debug.Log("Tier Points: " + finalTierPoints);
+
+                WindowScript.instance.gameFinished = false;
+            }
+        if (currentScoreText != null)
         {
-            //final score is calculated by adding up how many seals you have sealed
-            //and subtracts points for moving too far from the seals 
-            //also subtracts points for moving too fast
-            //and subtracts even more points for losing points for too long
-            FinalScore = GetFinalScore();
-            PlayerPrefs.SetFloat(scoreKey, FinalScore);
-            PlayerPrefs.Save();
-            Debug.Log("Final Score: " + FinalScore);
-            WindowScript.instance.gameFinished = false; 
+            float livePercentage = 0f;
+
+            if (maxPossibleScore > 0f)
+            {
+                livePercentage = (CurrentScore / maxPossibleScore) * 100f;
+                livePercentage = Mathf.Clamp(livePercentage, 0f, 100f);
+            }
+
+            currentScoreText.text = "Current Score: " + livePercentage.ToString("F2") + "%";
         }
+
 
         lastMousePosition = Camera.main.ScreenToWorldPoint
         (new Vector3(Input.mousePosition.x, Input.mousePosition.y, 
         Math.Abs(Camera.main.transform.position.z - WindowPoints[0].position.z)));
 
-        accuracyText.text = ("Current Score: " + CurrentScore.ToString());
+       
     }
     float distanceToPoint;
     Vector3 worldMousePos;
@@ -186,4 +237,22 @@ public class WindowLogic : MonoBehaviour
         float roundedScore = (float)(Math.Round(CurrentScore * 100f) / 100f);
         return Mathf.Max(0, roundedScore);
     }
+    float CalculateTierPoints(float percentage)
+    {
+        if (percentage >= 100f)
+        {
+            return 15f;
+        }
+        else if (percentage >= 90f)
+        {
+            return 10f;
+        }
+        else
+        {
+            return 0f;
+        }
+    }
+
+
+
 }
