@@ -600,6 +600,7 @@ GameObject:
   - component: {fileID: 353212750}
   - component: {fileID: 353212749}
   - component: {fileID: 353212748}
+  - component: {fileID: 353212751}
   m_Layer: 5
   m_Name: Back_button
   m_TagString: Untagged
@@ -670,7 +671,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 353212749}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 353212751}
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: FindSceneScript
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &353212749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,6 +722,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353212746}
   m_CullTransparentMesh: 1
+--- !u!114 &353212751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353212746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db02d10e7c7746141bc84572d14d4080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneButton
+  targetScene: Level 2
 --- !u!1 &566412115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,8 +1208,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 353212747}
   - {fileID: 84006966}
+  - {fileID: 353212747}
   - {fileID: 159277510}
   - {fileID: 1913032166}
   - {fileID: 1462463253}
