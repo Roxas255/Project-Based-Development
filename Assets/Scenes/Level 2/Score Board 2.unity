@@ -1786,9 +1786,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 958883406}
-        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 958883414}
+        m_TargetAssemblyTypeName: Level2Retry, Assembly-CSharp
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2509,9 +2509,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1302902542}
+      - m_Target: {fileID: 1302902536}
         m_TargetAssemblyTypeName: Level1Retry, Assembly-CSharp
-        m_MethodName: Retry
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2571,7 +2571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db02d10e7c7746141bc84572d14d4080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  targetScene: Level 2
+  targetScene: Level 3
 --- !u!114 &1302902542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2581,10 +2581,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1302902536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31309698ffd4e6142a5068434a9f35d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 39922ebc4ae3d644b825ada81f38239c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Level1Retry
-  targetScene: Level 1
+  m_EditorClassIdentifier: Assembly-CSharp::Level2Retry
+  targetScene: Level 2
 --- !u!1 &1394225660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2683,7 +2683,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1394225666}
-        m_TargetAssemblyTypeName: Level1Retry, Assembly-CSharp
+        m_TargetAssemblyTypeName: Level2Retry, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
@@ -2754,10 +2754,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1394225660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31309698ffd4e6142a5068434a9f35d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 39922ebc4ae3d644b825ada81f38239c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Level1Retry
-  targetScene: Level 1
+  m_EditorClassIdentifier: Assembly-CSharp::Level2Retry
+  targetScene: Level 2
 --- !u!1 &1396079626
 GameObject:
   m_ObjectHideFlags: 0
