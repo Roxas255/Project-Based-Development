@@ -51,7 +51,7 @@ public class ScoreDisplay : MonoBehaviour
 
         gradeText.text = GetGrade((int)currentScore);
 
-        starDisplay.SetStars((int)currentScore);
+        starDisplay.SetStars((int)currentScore, 45);
         scorePointerMover.MovePointer(currentScore);
     }
 

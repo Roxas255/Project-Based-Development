@@ -8,31 +8,30 @@ public class StarDisplay : MonoBehaviour
     public Image star2;
     public Image star3;
     public GameObject stamp;
-    public void SetStars(int score)
+    public void SetStars(int score, int maxScore)
     {
-        // Turn all off stars first
+        float percent = (float)score / maxScore;
+
+        // Turn all off first
         star1.enabled = false;
         star2.enabled = false;
         star3.enabled = false;
-
-        // Hides stamp first
         stamp.SetActive(false);
 
-        if (score >= 15 && score <= 29)
+        if (percent >= 0.33f)
         {
             star1.enabled = true;
-            stamp.SetActive(true); 
+            stamp.SetActive(true);
         }
-        else if (score >= 30 && score <= 39)
+
+        if (percent >= 0.66f)
         {
-            star1.enabled = true;
             star2.enabled = true;
-            stamp.SetActive(true); 
         }
-        else if (score >= 40)
+
+        if (percent >= 0.9f)
         {
-            star1.enabled = true;
-            star2.enabled = true;
+            star3.enabled = true;
         }
     }
 }

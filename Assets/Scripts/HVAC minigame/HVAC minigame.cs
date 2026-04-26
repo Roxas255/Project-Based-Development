@@ -4,7 +4,6 @@ using UnityEngine;
 public class HVACminigame : MonoBehaviour
 {
     [Header("UI")]
-    
     public TMP_Text acButtonText;
 
     [Header("Objects")]
@@ -26,41 +25,23 @@ public class HVACminigame : MonoBehaviour
         cleanFilter.SetActive(true);
 
         UpdateACText();
-        
     }
 
     public void ToggleAC()
     {
-        if (acOn)
-        {
-            acOn = false;
-           
-        }
-        else
-        {
-            acOn = true;
-
-            
-                
-        }
-
+        acOn = !acOn;
         UpdateACText();
     }
 
     public void OpenVent()
     {
         if (acOn)
-        {
-            
             return;
-        }
 
         ventOpen = true;
         closedVent.SetActive(false);
         openVent.SetActive(true);
         dirtyFilter.SetActive(true);
-
-        
     }
 
     public bool CanRemoveDirtyFilter()
@@ -72,8 +53,6 @@ public class HVACminigame : MonoBehaviour
     {
         dirtyFilterRemoved = true;
         dirtyFilter.SetActive(false);
-
-        
     }
 
     public bool CanInsertCleanFilter()
@@ -84,7 +63,6 @@ public class HVACminigame : MonoBehaviour
     public void CleanFilterInserted()
     {
         cleanFilterInserted = true;
-       
     }
 
     public bool IsComplete()

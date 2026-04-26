@@ -2083,7 +2083,8 @@ MonoBehaviour:
   resultPanel: {fileID: 617819588}
   titleText: {fileID: 343433451}
   scoreText: {fileID: 162647865}
-  levelToLoad: Level 1
+  levelToLoad: Level 2
+  playerPrefsKey: Pipeline2Score
 --- !u!4 &1348642668
 Transform:
   m_ObjectHideFlags: 0

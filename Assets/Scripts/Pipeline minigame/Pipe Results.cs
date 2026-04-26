@@ -18,6 +18,9 @@ public class PipeResults : MonoBehaviour
     [Header("Scene To Load")]
     [SerializeField] private string levelToLoad = "Level 1";
 
+    [Header("Save Key")]
+    [SerializeField] private string playerPrefsKey = "PipelineScore";
+
     private int pointsEarned = 0;
 
     void Start()
@@ -55,7 +58,7 @@ public class PipeResults : MonoBehaviour
             scoreText.text = "Energy Score Gained: 0";
         }
 
-        PlayerPrefs.SetFloat("PipelineScore", pointsEarned);
+        PlayerPrefs.SetFloat(playerPrefsKey, pointsEarned);
         PlayerPrefs.Save();
 
         resultPanel.SetActive(true);
