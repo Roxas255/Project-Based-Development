@@ -2404,9 +2404,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 84006969}
-        m_TargetAssemblyTypeName: HVACminigame, Assembly-CSharp
-        m_MethodName: FinishMinigame
+      - m_Target: {fileID: 314477621}
+        m_TargetAssemblyTypeName: HVACresults, Assembly-CSharp
+        m_MethodName: FinishHVAC
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
