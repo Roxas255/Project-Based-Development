@@ -18,24 +18,23 @@ public class DirtyFilter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public void OnBeginDrag(PointerEventData eventData)
     {
         startPosition = rectTransform.anchoredPosition;
+
+        if (hvacMinigame.CanRemoveDirtyFilter())
+        {
+            hvacMinigame.DirtyFilterDraggedOut();
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!hvacMinigame.CanRemoveDirtyFilter())
-            return;
-
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (!hvacMinigame.CanRemoveDirtyFilter())
+        if (hvacMinigame != null)
         {
-            rectTransform.anchoredPosition = startPosition;
-            return;
+            hvacMinigame.HideDirtyFilter();
         }
-
-        hvacMinigame.DirtyFilterDraggedOut();
     }
 }
