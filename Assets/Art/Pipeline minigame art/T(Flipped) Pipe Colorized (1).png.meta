@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9687e0b4a84787142b44d350591097ba
+guid: 69920eccba6d8d94b8818a2e44c8c228
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7150203624155494440
-    second: T(Flipped) Pipe Colorized_0
+      213: 7302346153478726344
+    second: T(Flipped) Pipe Colorized (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T(Flipped) Pipe Colorized_0
+      name: T(Flipped) Pipe Colorized (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d7408eefaf55cc90800000000000000
-      internalID: -7150203624155494440
+      spriteID: 8c22a091325275560800000000000000
+      internalID: 7302346153478726344
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T(Flipped) Pipe Colorized_0: -7150203624155494440
+      T(Flipped) Pipe Colorized (1)_0: 7302346153478726344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

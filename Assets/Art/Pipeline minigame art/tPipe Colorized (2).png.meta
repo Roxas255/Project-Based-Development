@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c84b3bbc17d6dda4ab4b59f0d7a0df84
+guid: 63552396131d5804489641fa73905f90
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9137509830542344331
-    second: Down & Right Pipe Colorized_0
+      213: -3587980634336791624
+    second: tPipe Colorized (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -47,7 +47,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Down & Right Pipe Colorized_0
+      name: tPipe Colorized (2)_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 37
-        height: 37
+        x: 0
+        y: 0
+        width: 46
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57f32e2c83b013180800000000000000
-      internalID: -9137509830542344331
+      spriteID: 8b3ff5d7f9ee43ec0800000000000000
+      internalID: -3587980634336791624
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Down & Right Pipe Colorized_0: -9137509830542344331
+      tPipe Colorized (2)_0: -3587980634336791624
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
