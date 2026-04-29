@@ -1,19 +1,39 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Localization.Settings; 
 
 public class Dialouge : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
+
+    [Header("Spanish Lines")] 
+    public string[] spanishLines;
+
     public float textSpeed;
     public GameObject Panel;
     public GameObject button;
     private int index;
-   
+
+    private string[] currentLines; 
+
     private void Start()
     {
         textComponent.text = string.Empty;
+
+        //decides which language is being used 
+        string languageCode = LocalizationSettings.SelectedLocale.Identifier.Code;
+
+        if (languageCode == "es")
+        {
+            currentLines = spanishLines;
+        }
+        else
+        {
+            currentLines = lines;
+        }
+
         StartDialogue();
     }
 
@@ -21,17 +41,18 @@ public class Dialouge : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (textComponent.text == lines[index])
+            if (textComponent.text == currentLines[index]) 
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];
+                textComponent.text = currentLines[index]; 
             }
         }
     }
+
     void StartDialogue()
     {
         index = 0;
@@ -40,7 +61,7 @@ public class Dialouge : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray())
+        foreach (char c in currentLines[index].ToCharArray()) 
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -49,7 +70,7 @@ public class Dialouge : MonoBehaviour
 
     void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < currentLines.Length - 1) 
         {
             index++;
             textComponent.text = string.Empty;
@@ -57,7 +78,7 @@ public class Dialouge : MonoBehaviour
         }
         else
         {
-            //gameObject.SetActive(false);
+            
             if (button != null)
             {
                 button.SetActive(true);
@@ -67,6 +88,5 @@ public class Dialouge : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
-
     }
 }

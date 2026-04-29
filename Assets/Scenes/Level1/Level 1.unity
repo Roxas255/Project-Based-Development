@@ -3057,6 +3057,11 @@ MonoBehaviour:
   - Those hot spots show where heat is escaping from the house. This leads to energy
     loss throughout the building.
   - Click the Thermal Vision Button again to turn the thermal view off.
+  spanishLines:
+  - "Esos puntos calientes muestran por d\xF3nde se escapa el calor de la casa. Esto
+    provoca p\xE9rdida de energ\xEDa en todo el edificio."
+  - "Haz clic de nuevo en el bot\xF3n de Visi\xF3n T\xE9rmica para desactivar la
+    vista t\xE9rmica."
   textSpeed: 0.05
   Panel: {fileID: 622703254}
   button: {fileID: 2041556874}
@@ -3157,6 +3162,13 @@ MonoBehaviour:
   - You have been selected to join the Intergalactic Energy Auditing Company.
   - Every structure you repair brings the galaxy one step closer to balance.
   - Your first assignment awaits.
+  spanishLines:
+  - "Durante miles de a\xF1os el consumo de energ\xEDa ha estado sin control."
+  - Sistemas enteros han sido drenados, los entornos erosionados, los planetas abandonados.
+  - "Has sido seleccionado para unirte a la Compa\xF1\xEDa de Auditor\xEDa Energ\xE9tica
+    Intergal\xE1ctica."
+  - "Cada estructura que reparas acerca a la galaxia un paso m\xE1s al equilibrio."
+  - "Te espera tu primera misi\xF3n."
   textSpeed: 0.075
   Panel: {fileID: 626722353}
   button: {fileID: 118923208}
@@ -3782,6 +3794,7 @@ MonoBehaviour:
   lines:
   - Great job! Use the thermal camera and take a look at other areas of the building
     to see if you can improve the energy efficiency any more.
+  spanishLines: []
   textSpeed: 0.05
   Panel: {fileID: 775147086}
   button: {fileID: 0}
@@ -4000,6 +4013,9 @@ MonoBehaviour:
   textComponent: {fileID: 539210748}
   lines:
   - Click the thermal vision button to locate energy loss.
+  spanishLines:
+  - "Haz clic en el bot\xF3n de Visi\xF3n T\xE9rmica para localizar la p\xE9rdida
+    de energ\xEDa."
   textSpeed: 0.05
   Panel: {fileID: 926812161}
   button: {fileID: 1822092979}
@@ -4911,6 +4927,8 @@ MonoBehaviour:
   textComponent: {fileID: 479291099}
   lines:
   - Click on the highlighted area to inspect the issue.
+  spanishLines:
+  - Haz clic en la zona resaltada para inspeccionar el problema.
   textSpeed: 0.05
   Panel: {fileID: 1248267779}
   button: {fileID: 903931548}
@@ -6280,6 +6298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialouge
   textComponent: {fileID: 0}
   lines: []
+  spanishLines: []
   textSpeed: 0.05
   Panel: {fileID: 0}
   button: {fileID: 0}
