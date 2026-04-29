@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public bool WindowMinigameComplete = false;
     public bool InsulationMinigameComplete = false;
     public bool PipeMinigameComplete = false;
-
+    public bool HvacMinigameComplete = false;
     public float totalScore;
     public float windowScore;
     public float insulationScore;
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name == "Level1")
         {
-            CheckMinigamesComplete();
+            //ResetMinigameBools();
         }
     }
 
@@ -53,19 +53,11 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void CheckMinigamesComplete()
+    public void ResetMinigameBools()
     {
-        if (WindowMinigameComplete == true)
-        {
-            
-        }
-        if (InsulationMinigameComplete == true)
-        {
-            
-        }
-        if (PipeMinigameComplete == true)
-        {
-            
-        }
+        WindowMinigameComplete = false;
+        InsulationMinigameComplete = false;
+        PipeMinigameComplete = false;
+        HvacMinigameComplete = false;
     }
 }

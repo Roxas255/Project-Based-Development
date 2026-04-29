@@ -9,5 +9,6 @@ public class Level1Retry : MonoBehaviour
     {
         Scorereset.ResetMiniGameScores(); 
         SceneManager.LoadScene(targetScene);
+        GameManager.instance.ResetMinigameBools();
     }
 }

@@ -99,9 +99,9 @@ public class WindowLogic : MonoBehaviour
                     finalscore.text = "Energy Score Gained: " + finalTierPoints.ToString("F0");
                 }
 
-                Debug.Log("Final Score: " + FinalScore);
-                Debug.Log("Percentage: " + finalPercentage);
-                Debug.Log("Tier Points: " + finalTierPoints);
+                //Debug.Log("Final Score: " + FinalScore);
+                //Debug.Log("Percentage: " + finalPercentage);
+                //Debug.Log("Tier Points: " + finalTierPoints);
 
                 WindowScript.instance.gameFinished = false;
             }
