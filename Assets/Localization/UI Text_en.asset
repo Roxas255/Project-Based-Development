@@ -74,6 +74,36 @@ MonoBehaviour:
     m_Localized: 'Best Score '
     m_Metadata:
       m_Items: []
+  - m_Id: 24293782060503040
+    m_Localized: 'Insulation: Sufficient
+
+
+      Moisture Conditions: Dry'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24294696326500352
+    m_Localized: Where is the defect located?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24295929485430784
+    m_Localized: Building Envelope
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24296660997214208
+    m_Localized: Plumbing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24297012727353344
+    m_Localized: Electrical
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24298082379730944
+    m_Localized: 'Insulation: Low
+
+
+      Moisture Conditions: Dry'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

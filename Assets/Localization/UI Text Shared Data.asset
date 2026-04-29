@@ -71,6 +71,30 @@ MonoBehaviour:
     m_Key: 'best score '
     m_Metadata:
       m_Items: []
+  - m_Id: 24293782060503040
+    m_Key: insulation/moisture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24294696326500352
+    m_Key: defect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24295929485430784
+    m_Key: evelope
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24296660997214208
+    m_Key: plumbing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24297012727353344
+    m_Key: electrical
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24298082379730944
+    m_Key: i/m
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
