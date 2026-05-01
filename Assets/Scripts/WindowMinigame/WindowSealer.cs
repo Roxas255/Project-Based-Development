@@ -38,7 +38,7 @@ public class WindowSealer : MonoBehaviour
         //adds a point to the line renderer and sets it to where the mouse is
         LR.positionCount++;
         int positionIndex = LR.positionCount - 1;
-        LR.SetPosition(positionIndex, pointPos);
+        LR.SetPosition(positionIndex, pointPos); //*1.25f
     }
     public void Draw()
     {
