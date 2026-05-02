@@ -29,6 +29,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2/HVAC minigame.unity
     guid: 7f01e77984e28624fadeef789065f10a
+  - enabled: 1
+    path: Assets/Scenes/Level 2/Insulation2.unity
+    guid: 51926d8c5b9d2164682d0bb7482c0d18
+  - enabled: 1
+    path: Assets/Scenes/Level 2/Window2.unity
+    guid: 6610911b4e1738a4fa3e5f8c87f2e9cd
+  - enabled: 1
+    path: Assets/Scenes/Level 2/Pipe 2.unity
+    guid: 8844120c08db2be46bf6e051182c8294
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 77d9df5a7c65f7046a2a15f0c7cdecb5, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

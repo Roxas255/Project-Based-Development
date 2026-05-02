@@ -46,8 +46,6 @@ public class WindowScript : MonoBehaviour
             currentTime -= Time.deltaTime;
             yield return null;
         }
-        /////////!!!////////////
-        //i need to set up the finish panel that displayed your final score and stuff. 
         if (currentTime <= 0)
         {
             FinishMinigame();
@@ -57,7 +55,7 @@ public class WindowScript : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         gameFinished = true;
-            if (currentScene.name == "Window1")
+            if ((currentScene.name == "Window1") || currentScene.name == "Window2")
             {
                 GameManager.instance.WindowMinigameComplete = true;
                 GameManager.instance.windowScore = WindowLogic.instance.FinalScore;
@@ -65,7 +63,7 @@ public class WindowScript : MonoBehaviour
                 WindowLogic.instance.finalscore.text = ("Accuracy: " + WindowLogic.instance.FinalScore.ToString("F2") + "%");
 
             }
-            if (currentScene.name == "Insulation1")
+            if ((currentScene.name == "Insulation1") || currentScene.name == "Insulation2")
             {
                 GameManager.instance.InsulationMinigameComplete = true;
                 GameManager.instance.insulationScore = WindowLogic.instance.FinalScore;
@@ -73,12 +71,16 @@ public class WindowScript : MonoBehaviour
                 WindowLogic.instance.finalscore.text = ("Accuracy: " + WindowLogic.instance.FinalScore.ToString("F2") + "%");
             }
             //actually i dont think we need this but im keeping this here bc i might forget
-            if (currentScene.name == "Pipe1")
+            if ((currentScene.name == "Pipe1") || currentScene.name == "Pipe 2")
             {
                 GameManager.instance.PipeMinigameComplete = true;
                 //we have to make a scoring thing for the pipe minigame. 
                 // GameManager.instance.pipeScore = PipeLogic?.instance.FinalScore;
                 //finishButton.SetActive(true);
+            }
+            if (currentScene.name == "HVAC minigame")
+            {
+                GameManager.instance.HvacMinigameComplete = true;
             }
             Debug.Log("Game finished");
     }

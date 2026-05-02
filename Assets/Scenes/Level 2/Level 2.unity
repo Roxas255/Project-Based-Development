@@ -5289,6 +5289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialouge
   textComponent: {fileID: 0}
   lines: []
+  spanishLines: []
   textSpeed: 0.05
   Panel: {fileID: 0}
   button: {fileID: 0}
@@ -6000,7 +6001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db02d10e7c7746141bc84572d14d4080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  targetScene: Insulation1
+  targetScene: Insulation2
 --- !u!114 &1795020563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7101,7 +7102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db02d10e7c7746141bc84572d14d4080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  targetScene: Pipe1
+  targetScene: Pipe 2
 --- !u!114 &2067735654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7342,7 +7343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db02d10e7c7746141bc84572d14d4080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  targetScene: Window1
+  targetScene: Window2
 --- !u!1 &2116084505
 GameObject:
   m_ObjectHideFlags: 0
