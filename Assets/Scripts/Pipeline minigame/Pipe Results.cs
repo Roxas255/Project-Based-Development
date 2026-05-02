@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings; 
 
 public class PipeResults : MonoBehaviour
 {
@@ -40,11 +41,24 @@ public class PipeResults : MonoBehaviour
 
         bool isCorrect = checker.IsPuzzleCorrect();
 
+        // checks selected lnaguage
+        string languageCode = LocalizationSettings.SelectedLocale.Identifier.Code;
+        bool isSpanish = languageCode == "es";
+
         if (isCorrect)
         {
             pointsEarned = 15;
-            titleText.text = "Pipe Complete";
-            scoreText.text = "Energy Score Gained: 15";
+
+            if (isSpanish)
+            {
+                titleText.text = "Tubería completada";
+                scoreText.text = "Puntuación de energía ganada: 15";
+            }
+            else
+            {
+                titleText.text = "Pipe Complete";
+                scoreText.text = "Energy Score Gained: 15";
+            }
 
             if (GameManager.instance != null)
             {
@@ -54,8 +68,17 @@ public class PipeResults : MonoBehaviour
         else
         {
             pointsEarned = 0;
-            titleText.text = "Task Failed";
-            scoreText.text = "Energy Score Gained: 0";
+
+            if (isSpanish)
+            {
+                titleText.text = "Tarea fallida";
+                scoreText.text = "Puntuación de energía ganada: 0";
+            }
+            else
+            {
+                titleText.text = "Task Failed";
+                scoreText.text = "Energy Score Gained: 0";
+            }
         }
 
         PlayerPrefs.SetFloat(playerPrefsKey, pointsEarned);

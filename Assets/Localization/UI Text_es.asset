@@ -104,6 +104,56 @@ MonoBehaviour:
       Condiciones de humedad: Seca'
     m_Metadata:
       m_Items: []
+  - m_Id: 25368506026921984
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25370104933355520
+    m_Localized: "Aislamiento: Suficiente\n\nCondiciones de humedad: H\xFAmedas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25378872396058624
+    m_Localized: "Visi\xF3n T\xE9rmica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25382825972174848
+    m_Localized: "Llena toda el \xE1rea antes de que se acabe el tiempo. Llena todo
+      el espacio y evita dejar huecos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25385746445078528
+    m_Localized: Ventana Terminada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25386774297022464
+    m_Localized: Eficiencia Mejorada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25388828725841920
+    m_Localized: 'La Exactitud:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25389815746236416
+    m_Localized: "Puntuaci\xF3n actual:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25395199257055232
+    m_Localized: 'Instrucciones: Haga clic y mantenga presionado para usar la herramienta,
+      comience en la esquina y trace todo el contorno de la ventana.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25396804916318208
+    m_Localized: Ventana................................................
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25396810796732416
+    m_Localized: Aislamiento............................................
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25396808473088000
+    m_Localized: "Tuber\xEDa................................................"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
