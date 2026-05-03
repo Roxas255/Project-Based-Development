@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PopupTextScript : MonoBehaviour
 {
@@ -19,10 +20,14 @@ public class PopupTextScript : MonoBehaviour
     public GameObject AfterWindowGamePopUp;
     void Start()
     {
-        if (GameManager.instance.WindowMinigameComplete == false)
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "Level1")
         {
-            tutorialText.SetActive(true);
-            Debug.Log("Hi");
+            if (GameManager.instance.WindowMinigameComplete == false)
+            {
+                tutorialText.SetActive(true);
+                Debug.Log("Hi");
+            }
         }
     }
     void Update()
