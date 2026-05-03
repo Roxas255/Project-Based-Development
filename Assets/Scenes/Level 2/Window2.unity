@@ -457,7 +457,7 @@ MonoBehaviour:
   FinalScore: 0
   currentScoreText: {fileID: 113277361}
   accuracyText: {fileID: 113277361}
-  scoreKey: WindowScore
+  scoreKey: Window2Score
   finalscore: {fileID: 739780533}
   losingPoints: 0
 --- !u!1 &113277359
