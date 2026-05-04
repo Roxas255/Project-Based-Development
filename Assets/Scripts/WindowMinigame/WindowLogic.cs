@@ -103,7 +103,7 @@ public class WindowLogic : MonoBehaviour
                 //Debug.Log("Percentage: " + finalPercentage);
                 //Debug.Log("Tier Points: " + finalTierPoints);
 
-                WindowScript.instance.gameFinished = false;
+                //WindowScript.instance.gameFinished = false;
             }
         if (currentScoreText != null)
         {

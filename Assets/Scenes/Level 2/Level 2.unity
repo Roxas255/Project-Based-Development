@@ -541,7 +541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &127664230
 RectTransform:
   m_ObjectHideFlags: 0
@@ -872,7 +872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 115}
+  m_AnchoredPosition: {x: -20, y: 160}
   m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &160359900
@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.105882354}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1645,7 +1645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &316791502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1947,7 +1947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &342482432
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2090,56 +2090,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1710912330}
-        m_TargetAssemblyTypeName: PopupTextScript, Assembly-CSharp
-        m_MethodName: CheckWindowHelp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1710912330}
-        m_TargetAssemblyTypeName: PopupTextScript, Assembly-CSharp
-        m_MethodName: CheckThermal2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1710912330}
-        m_TargetAssemblyTypeName: PopupTextScript, Assembly-CSharp
-        m_MethodName: CheckThermal1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 367386198}
-        m_TargetAssemblyTypeName: ThermalScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: ThermalScript2, Assembly-CSharp
         m_MethodName: ButtonOnOff
         m_Mode: 1
         m_Arguments:
@@ -2219,11 +2171,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 367386192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ee5f20fc5f75d646b9311e80eff7657, type: 3}
+  m_Script: {fileID: 11500000, guid: 3780fe509409d9d4ea487b0f4ff7af10, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ThermalScript
+  m_EditorClassIdentifier: Assembly-CSharp::ThermalScript2
   normal: {fileID: 1718339622}
   thermal: {fileID: 2058548946}
+  WindowButton: {fileID: 316791501}
+  InsulationButton: {fileID: 1464669688}
+  WindowButtonAnimator: {fileID: 316791507}
+  InsulationButtonAnimator: {fileID: 1464669694}
   check: 0
 --- !u!1 &368605640
 GameObject:
@@ -3288,7 +3244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 309, y: -136}
+  m_AnchoredPosition: {x: 309, y: -91}
   m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &741769720
@@ -3372,7 +3328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.31764707}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4151,7 +4107,7 @@ GameObject:
   - component: {fileID: 1140840571}
   - component: {fileID: 1140840570}
   m_Layer: 5
-  m_Name: InitialText 2
+  m_Name: Text 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4191,8 +4147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialouge
   textComponent: {fileID: 113780835}
   lines:
-  - "Now, let\u2019s take a look at the home\u2019s BTU requirements. Here are the
-    details: "
+  - Use your tools to locate and repair inefficiencies.
   spanishLines: []
   textSpeed: 0.065
   Panel: {fileID: 1140840568}
@@ -5001,7 +4956,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1710912332}
         m_TargetAssemblyTypeName: Level2Popups, Assembly-CSharp
-        m_MethodName: BTUPanelOnOff
+        m_MethodName: ToggleBTUPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5208,7 +5163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1464669689
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5554,6 +5509,8 @@ MonoBehaviour:
   - "You\u2019ve successfully completed your initial training."
   - Next, you will be assigned to an active residential structure.
   - Efficiency matters. So identify and repair all major energy defects.
+  - "Now, let\u2019s take a look at the home\u2019s BTU requirements. Here are the
+    details: "
   spanishLines: []
   textSpeed: 0.065
   Panel: {fileID: 1885971492}
@@ -6006,6 +5963,7 @@ MonoBehaviour:
   InsulationButtonAnimator: {fileID: 1464669694}
   InsulationButton: {fileID: 1464669688}
   PipeButton: {fileID: 741769718}
+  HVACButton: {fileID: 160359898}
 --- !u!114 &1710912332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6022,6 +5980,7 @@ MonoBehaviour:
   BTUIntro: {fileID: 1140840568}
   BTUPanel: {fileID: 127664229}
   BTUInfoPanel: {fileID: 342482431}
+  Text2: {fileID: 1140840568}
 --- !u!1 &1712502224
 GameObject:
   m_ObjectHideFlags: 0

@@ -67,6 +67,7 @@ public class WindowScript : MonoBehaviour
             {
                 GameManager.instance.InsulationMinigameComplete = true;
                 GameManager.instance.insulationScore = WindowLogic.instance.FinalScore;
+                Debug.Log("ButtonAppear");
                 finishButton.SetActive(true);
                 WindowLogic.instance.finalscore.text = ("Accuracy: " + WindowLogic.instance.FinalScore.ToString("F2") + "%");
             }
@@ -74,9 +75,6 @@ public class WindowScript : MonoBehaviour
             if ((currentScene.name == "Pipe1") || currentScene.name == "Pipe 2")
             {
                 GameManager.instance.PipeMinigameComplete = true;
-                //we have to make a scoring thing for the pipe minigame. 
-                // GameManager.instance.pipeScore = PipeLogic?.instance.FinalScore;
-                //finishButton.SetActive(true);
             }
             if (currentScene.name == "HVAC minigame")
             {

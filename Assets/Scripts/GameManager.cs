@@ -34,24 +34,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "Level1")
-        {
-            //ResetMinigameBools();
-        }
-    }
-
-    void CheckDialoguePlayed()
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        
-    }
 
     public void ResetMinigameBools()
     {

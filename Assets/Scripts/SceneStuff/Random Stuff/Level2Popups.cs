@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Level2Popups : MonoBehaviour
 {
@@ -6,25 +8,30 @@ public class Level2Popups : MonoBehaviour
     public GameObject BTUIntro;
     public GameObject BTUPanel;
     public GameObject BTUInfoPanel;
+    public GameObject Text2;
   //  public GameObject 
     void Start()
     {
         InitialText.SetActive(true);
-        GameManager.instance.playedIntro = true;
     }
 
     void Update()
     {
-        if (InitialText.activeSelf == false)
+        if (!InitialText.activeSelf && !GameManager.instance.playedThermalIntro)
         {
-            BTUIntro.SetActive(true);
-            BTUPanel.SetActive(true);
-            GameManager.instance.playedThermalIntro = true; //ignorre the bool name. It is the 2nd popup.
-            BTUInfoPanel.SetActive(true); 
+            ShowBTUPanel();
+            GameManager.instance.playedThermalIntro = true;
         }
     }
 
-    public void BTUPanelOnOff()
+    public void ShowBTUPanel()
+    {
+        BTUInfoPanel.SetActive(true);
+        GameManager.instance.playedIntro = true;
+        Text2.SetActive(true);
+    }
+
+    public void ToggleBTUPanel()
     {
         BTUInfoPanel.SetActive(!BTUInfoPanel.activeSelf);
     }

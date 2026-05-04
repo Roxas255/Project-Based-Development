@@ -5,6 +5,7 @@ public class Popups2 : MonoBehaviour
     public Animator InsulationButtonAnimator;
     public GameObject InsulationButton;
     public GameObject PipeButton;
+    public GameObject HVACButton;
     
     void Update()
     {
@@ -30,6 +31,11 @@ public class Popups2 : MonoBehaviour
         else if (GameManager.instance.InsulationMinigameComplete)
         {
             return;
+        }
+
+        if (GameManager.instance.HvacMinigameComplete)
+        {
+            HVACButton.SetActive(false);
         }
     }
 }

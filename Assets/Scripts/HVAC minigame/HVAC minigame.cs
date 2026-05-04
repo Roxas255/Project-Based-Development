@@ -146,6 +146,7 @@ public class HVACminigame : MonoBehaviour
     public bool IsComplete()
     {
         // Complete only if dirty removed, clean inserted, vent closed, and AC back ON
+        GameManager.instance.HvacMinigameComplete = true;
         return dirtyFilterRemoved && cleanFilterInserted && !ventOpen && acOn;
     }
 
