@@ -1804,6 +1804,7 @@ GameObject:
   - component: {fileID: 332355611}
   - component: {fileID: 332355613}
   - component: {fileID: 332355612}
+  - component: {fileID: 332355614}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1930,6 +1931,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332355610}
   m_CullTransparentMesh: 1
+--- !u!114 &332355614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332355610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:6f501d51f28c990409ee2be8029d6679
+    m_TableEntryReference:
+      m_KeyId: 24294696326500352
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 332355612}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: SetText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &342482431
 GameObject:
   m_ObjectHideFlags: 0
@@ -4148,7 +4189,8 @@ MonoBehaviour:
   textComponent: {fileID: 113780835}
   lines:
   - Use your tools to locate and repair inefficiencies.
-  spanishLines: []
+  spanishLines:
+  - Utiliza tus herramientas para localizar y reparar ineficiencias.
   textSpeed: 0.065
   Panel: {fileID: 1140840568}
   button: {fileID: 0}
@@ -5015,6 +5057,7 @@ GameObject:
   - component: {fileID: 1422748684}
   - component: {fileID: 1422748686}
   - component: {fileID: 1422748685}
+  - component: {fileID: 1422748687}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5144,6 +5187,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422748683}
   m_CullTransparentMesh: 1
+--- !u!114 &1422748687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422748683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:6f501d51f28c990409ee2be8029d6679
+    m_TableEntryReference:
+      m_KeyId: 24293782060503040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1422748685}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: SetText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1464669688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5511,7 +5594,13 @@ MonoBehaviour:
   - Efficiency matters. So identify and repair all major energy defects.
   - "Now, let\u2019s take a look at the home\u2019s BTU requirements. Here are the
     details: "
-  spanishLines: []
+  spanishLines:
+  - "Has completado con \xE9xito tu formaci\xF3n inicial."
+  - "A continuaci\xF3n, se te asignar\xE1 una estructura residencial activa."
+  - "La eficiencia importa. As\xED que identifica y repara todos los defectos energ\xE9ticos
+    importantes."
+  - "Ahora, echemos un vistazo a los requisitos de BTU de la vivienda. Aqu\xED est\xE1n
+    los detalles:"
   textSpeed: 0.065
   Panel: {fileID: 1885971492}
   button: {fileID: 0}
@@ -8185,6 +8274,7 @@ GameObject:
   - component: {fileID: 2116084506}
   - component: {fileID: 2116084508}
   - component: {fileID: 2116084507}
+  - component: {fileID: 2116084509}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -8311,6 +8401,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116084505}
   m_CullTransparentMesh: 1
+--- !u!114 &2116084509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116084505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:6f501d51f28c990409ee2be8029d6679
+    m_TableEntryReference:
+      m_KeyId: 24295929485430784
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &2138641916
 GameObject:
   m_ObjectHideFlags: 0
