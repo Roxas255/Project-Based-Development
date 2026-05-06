@@ -202,9 +202,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 305650861}
-        m_TargetAssemblyTypeName: Finishbuttonlvl1, Assembly-CSharp
-        m_MethodName: GoToScoreBoard
+      - m_Target: {fileID: 305650860}
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: FindSceneScript
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1591,7 +1591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305650859}
-  - component: {fileID: 305650861}
+  - component: {fileID: 305650860}
   m_Layer: 0
   m_Name: UI Manager
   m_TagString: Untagged
@@ -1614,7 +1614,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &305650861
+--- !u!114 &305650860
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1623,9 +1623,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 305650857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 265d6c845de07b34695295c7cfc2539f, type: 3}
+  m_Script: {fileID: 11500000, guid: db02d10e7c7746141bc84572d14d4080, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Finishbuttonlvl1
+  m_EditorClassIdentifier: Assembly-CSharp::SceneButton
+  targetScene: Score Board 2
 --- !u!1 &316791501
 GameObject:
   m_ObjectHideFlags: 0

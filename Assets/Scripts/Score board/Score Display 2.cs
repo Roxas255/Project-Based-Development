@@ -8,8 +8,10 @@ public class ScoreDisplay2 : MonoBehaviour
     [SerializeField] private TMP_Text bestScoreText;
 
     [Header("Mini Game Scores")]
-    [SerializeField] private TMP_Text hvacScoreText;
+    [SerializeField] private TMP_Text window2ScoreText;
     [SerializeField] private TMP_Text pipeline2ScoreText;
+    [SerializeField] private TMP_Text insulation2ScoreText;
+    [SerializeField] private TMP_Text hvacScoreText;
     [SerializeField] private TMP_Text gradeText;
 
     public StarDisplay starDisplay;
@@ -17,15 +19,16 @@ public class ScoreDisplay2 : MonoBehaviour
 
     void Start()
     {
-        float hvacScore = PlayerPrefs.GetInt("HVACScore", 0);
-        float pipeline2Score = PlayerPrefs.GetFloat("Pipeline2Score", 0f);
+        float windowScore = PlayerPrefs.GetFloat("Window2Score", 0f);
+        float pipelineScore = PlayerPrefs.GetFloat("Pipeline2Score", 0f);
+        float insulationScore = PlayerPrefs.GetFloat("Insulation2Score", 0f);
+        float hvacScore = PlayerPrefs.GetFloat("HVACScore2", 0f);
 
-        float currentScore = hvacScore + pipeline2Score;
+        float currentScore = windowScore + pipelineScore + insulationScore + hvacScore;
         currentScore = Mathf.Clamp(currentScore, 0f, 50f);
 
         float bestScore = PlayerPrefs.GetFloat("BestEnergyAuditScore_Level2", 0f);
 
-        // reset impossible scores
         if (bestScore > 50f)
         {
             bestScore = 0f;
@@ -43,8 +46,10 @@ public class ScoreDisplay2 : MonoBehaviour
         currentScoreText.text = currentScore.ToString("F0");
         bestScoreText.text = bestScore.ToString("F0");
 
+        window2ScoreText.text = windowScore.ToString("F0");
+        pipeline2ScoreText.text = pipelineScore.ToString("F0");
+        insulation2ScoreText.text = insulationScore.ToString("F0");
         hvacScoreText.text = hvacScore.ToString("F0");
-        pipeline2ScoreText.text = pipeline2Score.ToString("F0");
 
         gradeText.text = GetGrade((int)currentScore);
 

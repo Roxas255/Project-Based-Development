@@ -105,7 +105,7 @@ public class HVACminigame : MonoBehaviour
 
         ventOpen = false;
 
-        // After closing vent, AC is still OFF, so show F2
+        // After closing vent, AC is still OFF
         hvacImage.sprite = f2_ACOffClosed;
     }
 
@@ -118,7 +118,7 @@ public class HVACminigame : MonoBehaviour
     {
         dirtyFilterRemoved = true;
 
-        // Change background immediately to empty vent
+        // Changes background immediately to empty vent
         hvacImage.sprite = f5_VentOpenEmpty;
     }
 
@@ -139,15 +139,23 @@ public class HVACminigame : MonoBehaviour
         // Hide the draggable clean filter object
         cleanFilter.SetActive(false);
 
-        // Show the background image with the clean filter installed
+        // Shows the background image with the clean filter installed
         hvacImage.sprite = f6_VentOpenClean;
     }
 
     public bool IsComplete()
     {
-        // Complete only if dirty removed, clean inserted, vent closed, and AC back ON
-        GameManager.instance.HvacMinigameComplete = true;
-        return dirtyFilterRemoved && cleanFilterInserted && !ventOpen && acOn;
+        bool completed = dirtyFilterRemoved
+                      && cleanFilterInserted
+                      && !ventOpen
+                      && acOn;
+
+        if (completed)
+        {
+            GameManager.instance.HvacMinigameComplete = true;
+        }
+
+        return completed;
     }
 
 }

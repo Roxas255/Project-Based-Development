@@ -2236,8 +2236,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreDisplay2
   currentScoreText: {fileID: 40668686}
   bestScoreText: {fileID: 1948996234}
-  hvacScoreText: {fileID: 1419037782}
+  window2ScoreText: {fileID: 1256004900}
   pipeline2ScoreText: {fileID: 1682745829}
+  insulation2ScoreText: {fileID: 37111690}
+  hvacScoreText: {fileID: 1419037782}
   gradeText: {fileID: 2091277002}
   starDisplay: {fileID: 1108103750}
   scorePointerMover: {fileID: 1108103751}

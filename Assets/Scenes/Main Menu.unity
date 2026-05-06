@@ -878,7 +878,7 @@ PrefabInstance:
     - target: {fileID: 506404696612811829, guid: e54e80f3074dea94e9e705b8dabc5d61, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fd100cfaf9a25ea48b932d3233cb7999, type: 3}
+      objectReference: {fileID: 4896821479072004859, guid: fd100cfaf9a25ea48b932d3233cb7999, type: 3}
     - target: {fileID: 1251951466854400020, guid: e54e80f3074dea94e9e705b8dabc5d61, type: 3}
       propertyPath: m_Name
       value: Settings
@@ -890,6 +890,10 @@ PrefabInstance:
     - target: {fileID: 4970014456967437679, guid: e54e80f3074dea94e9e705b8dabc5d61, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970014456967437679, guid: e54e80f3074dea94e9e705b8dabc5d61, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6290682915760906621, guid: e54e80f3074dea94e9e705b8dabc5d61, type: 3}
       propertyPath: m_AnchorMax.x

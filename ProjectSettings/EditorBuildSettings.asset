@@ -38,6 +38,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2/Pipe 2.unity
     guid: 8844120c08db2be46bf6e051182c8294
+  - enabled: 1
+    path: Assets/Scenes/Level 2/Score Board 2.unity
+    guid: 28eb160ab036fc94bab5ac96ed7d4b19
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 9ddfae22b66d624409ec69423e755853
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 77d9df5a7c65f7046a2a15f0c7cdecb5, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
