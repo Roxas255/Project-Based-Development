@@ -28,12 +28,14 @@ public class HVACresults : MonoBehaviour
     public void FinishHVAC()
     {
         bool isCorrect = hvacMinigame.IsComplete();
-
+        GameManager.instance.HvacMinigameComplete = true;
         if (isCorrect)
         {
             pointsEarned = 5;
             titleText.text = "HVAC Complete";
             scoreText.text = "Energy Score Gained: 5";
+            GameManager.instance.HvacMinigameComplete = true;
+
         }
         else
         {
