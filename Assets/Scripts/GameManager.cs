@@ -1,3 +1,6 @@
+using NUnit.Framework;
+using TMPro;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +16,18 @@ public class GameManager : MonoBehaviour
     public float windowScore;
     public float insulationScore;
     public float pipeScore;
+    
+    
+    //btu stuff
+    public int CurrentBTU = 90000;
+    public bool windowAbove97;
+    public bool windowAbove90;
+    public bool InsulationAbove97;
+    public bool InsulationAbove90;
+    public bool PipeCorrect;
+    public bool HVACcorrect;
+
+
 
 
 
@@ -21,6 +36,12 @@ public class GameManager : MonoBehaviour
     public bool playedThermal2 = false;
     public bool playeedWindowHelp = false;
     public bool playedWindowHelp2 = false;
+
+    public bool checked1;
+    public bool checked2;
+    public bool checked3;
+    public bool checked4;
+
 
     void Awake()
     {
@@ -33,13 +54,111 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
+    }
+    
+
+    public void Update()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (!checked1)
+            CheckWindowScore();
+        if (!checked2)
+            CheckInsulationScore();
+        if (!checked3)
+            CheckPipeScore();
+        if (!checked4)
+            CheckHVACScore();
     }
 
+
+    public void CheckWindowScore()
+    {        
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (windowAbove97)
+        {
+            CurrentBTU -= 8000;
+            checked1 = true;
+        }
+        else if (windowAbove90)     
+        {
+            CurrentBTU -= 6000;
+            checked1 = true;
+        }
+        else if (!windowAbove90 && !windowAbove97)
+            CurrentBTU -= 0;
+    }
+
+    public void CheckInsulationScore()
+    {        
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (InsulationAbove97)
+        {
+           CurrentBTU -= 14000;
+           checked2 = true;
+        }
+        else if (InsulationAbove90)
+        {
+            CurrentBTU -= 12000;
+            checked2 = true;
+        }
+        else if (!InsulationAbove97 && !InsulationAbove90)
+            CurrentBTU -= 0;
+    }
+    
+    public void CheckPipeScore()
+    {        
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (PipeCorrect)
+            {
+                CurrentBTU -= 4000;
+                checked3 = true;
+            }
+        //else if (PipeIncorrect)
+        //  CurrentBTU += 2000;
+    }
+    public void CheckHVACScore()
+    {        
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (HVACcorrect)
+        {
+            Debug.Log("-6000");
+            CurrentBTU -= 6000;
+            checked4 = true;
+        }
+        //else if (HVACminigame.instance.correct == false)
+        //  CurrentBTU += 2000;
+    }
+        
     public void ResetMinigameBools()
     {
-        WindowMinigameComplete = false;
-        InsulationMinigameComplete = false;
-        PipeMinigameComplete = false;
-        HvacMinigameComplete = false;
+        // Reset BTU
+        CurrentBTU = 90000;
+        // Minigame Complete Checks
+        WindowMinigameComplete = false; 
+        InsulationMinigameComplete = false; 
+        PipeMinigameComplete = false; 
+        HvacMinigameComplete = false; 
+
+        // Score thresholds
+        windowAbove97 = false;
+        windowAbove90 = false;
+        InsulationAbove97 = false;
+        InsulationAbove90 = false;
+
+        // Results
+        PipeCorrect = false;
+        HVACcorrect = false;
+
+        // Progression checks
+        checked1 = false;
+        checked2 = false;
+        checked3 = false;
+        checked4 = false;
     }
 }

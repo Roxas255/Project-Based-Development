@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class WindowLogic : MonoBehaviour
 {
@@ -237,14 +238,29 @@ public class WindowLogic : MonoBehaviour
         float roundedScore = (float)(Math.Round(CurrentScore * 100f) / 100f);
         return Mathf.Max(0, roundedScore);
     }
+    public float percent;
     float CalculateTierPoints(float percentage)
     {
-        if (percentage >= 100f)
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        percent = percentage;
+
+        if (percent >= 97f)
         {
+            if (currentScene.name == "Window2") 
+                GameManager.instance.windowAbove97 = true;
+            if (currentScene.name == "Insulation2")
+                GameManager.instance.InsulationAbove97 = true; 
+            
             return 15f;
         }
-        else if (percentage >= 90f)
-        {
+        else if (percent >= 90f)
+        {            
+            if (currentScene.name == "Window2") 
+                GameManager.instance.windowAbove90 = true;
+            if (currentScene.name == "Insulation2")
+                GameManager.instance.InsulationAbove90 = true; 
+
             return 10f;
         }
         else

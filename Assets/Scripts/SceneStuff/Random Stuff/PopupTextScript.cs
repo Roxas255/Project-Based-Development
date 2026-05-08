@@ -14,8 +14,9 @@ public class PopupTextScript : MonoBehaviour
     public GameObject WindowQuestionPanel;
     public GameObject WindowInfoPanel;
     public TextMeshProUGUI WindowQuestionText;
-    //public GameObject PipeInfo;
+    public TextMeshProUGUI InsulationQuestionText;
     public TextMeshProUGUI PipeQuestionText;
+    public TextMeshProUGUI HVACQuestionText;
 
     public GameObject AfterWindowGamePopUp;
     void Start()
@@ -32,9 +33,12 @@ public class PopupTextScript : MonoBehaviour
     }
     void Update()
     {
-        if (GameManager.instance.WindowMinigameComplete && !GameManager.instance.PipeMinigameComplete && !GameManager.instance.InsulationMinigameComplete)
+        if (AfterWindowGamePopUp != null)
         {
-            AfterWindowGamePopUp.SetActive(true);
+            if (GameManager.instance.WindowMinigameComplete && !GameManager.instance.PipeMinigameComplete && !GameManager.instance.InsulationMinigameComplete)
+            {
+                AfterWindowGamePopUp.SetActive(true);
+            }
         }
     }
     public void CheckIntroText()
@@ -86,19 +90,42 @@ public class PopupTextScript : MonoBehaviour
     }
     public IEnumerator ChangeQuestionText(string newText)
     {
+        Debug.Log("ChangedText");
         WindowQuestionText.text = newText;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         WindowQuestionText.text = ("Where is the defect located?");
     }   
-
+    public void QuestionWrong2()
+    {
+        StartCoroutine(ChangeQuestionText1("Incorrect. Try again."));
+    }
+    public IEnumerator ChangeQuestionText1(string newText)
+    {
+        Debug.Log("ChangedText");   
+        InsulationQuestionText.text = newText;
+        yield return new WaitForSeconds(1.5f);
+        InsulationQuestionText.text = ("Where is the defect located?");
+    }   
     public void PipeQuestionWrong()
     {
         StartCoroutine(ChangeQuestionText2("Incorrect. Try again."));
     }
     public IEnumerator ChangeQuestionText2(string newText)
-    {
+    {        
+        Debug.Log("ChangedText");
         PipeQuestionText.text = newText;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         PipeQuestionText.text = ("Where is the defect located?");
+    }   
+    public void QuestionWrong4()
+    {
+        StartCoroutine(ChangeQuestionText3("Incorrect. Try again."));
+    }
+    public IEnumerator ChangeQuestionText3(string newText)
+    {
+        Debug.Log("ChangedText");
+        HVACQuestionText.text = newText;
+        yield return new WaitForSeconds(1.5f);
+        HVACQuestionText.text = ("Where is the defect located?");
     }   
 }

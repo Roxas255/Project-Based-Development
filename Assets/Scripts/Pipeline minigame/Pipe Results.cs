@@ -24,8 +24,13 @@ public class PipeResults : MonoBehaviour
 
     private int pointsEarned = 0;
 
+    public bool correct = false;
+
+    public static PipeResults instance;
     void Start()
     {
+        instance = this;
+
         if (resultPanel != null)
         {
             resultPanel.SetActive(false);
@@ -40,19 +45,22 @@ public class PipeResults : MonoBehaviour
         }
 
         bool isCorrect = checker.IsPuzzleCorrect();
-
+        correct = isCorrect;
         // checks selected lnaguage
         string languageCode = LocalizationSettings.SelectedLocale.Identifier.Code;
         bool isSpanish = languageCode == "es";
 
         if (isCorrect)
         {
+            Scene currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name == "Pipe 2")
+                GameManager.instance.PipeCorrect = true;
             pointsEarned = 15;
 
             if (isSpanish)
             {
-                titleText.text = "Tubería completada";
-                scoreText.text = "Puntuación de energía ganada: 15";
+                titleText.text = "Tuberï¿½a completada";
+                scoreText.text = "Puntuaciï¿½n de energï¿½a ganada: 15";
             }
             else
             {
@@ -72,7 +80,7 @@ public class PipeResults : MonoBehaviour
             if (isSpanish)
             {
                 titleText.text = "Tarea fallida";
-                scoreText.text = "Puntuación de energía ganada: 0";
+                scoreText.text = "Puntuaciï¿½n de energï¿½a ganada: 0";
             }
             else
             {

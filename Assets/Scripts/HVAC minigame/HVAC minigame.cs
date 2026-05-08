@@ -1,5 +1,5 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HVACminigame : MonoBehaviour
@@ -25,9 +25,12 @@ public class HVACminigame : MonoBehaviour
     private bool ventOpen = false;
     private bool dirtyFilterRemoved = false;
     private bool cleanFilterInserted = false;
+    public bool correct;
 
+    public static HVACminigame instance;
     void Start()
     {
+        instance = this;
         // Start state: AC is ON and vent is closed
         acOn = true;
         ventOpen = false;
@@ -145,6 +148,7 @@ public class HVACminigame : MonoBehaviour
 
     public bool IsComplete()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
         bool completed = dirtyFilterRemoved
                       && cleanFilterInserted
                       && !ventOpen
@@ -152,6 +156,9 @@ public class HVACminigame : MonoBehaviour
 
         if (completed)
         {
+            if (currentScene.name == "HVAC minigame")
+                GameManager.instance.HVACcorrect = true;
+
             GameManager.instance.HvacMinigameComplete = true;
         }
 

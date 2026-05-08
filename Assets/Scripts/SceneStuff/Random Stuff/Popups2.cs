@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Popups2 : MonoBehaviour
 {
@@ -6,9 +8,24 @@ public class Popups2 : MonoBehaviour
     public GameObject InsulationButton;
     public GameObject PipeButton;
     public GameObject HVACButton;
+    public TextMeshProUGUI BTUText;
     
     void Update()
     {
+
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "Level 2")
+        {
+            Debug.Log("UpdatedBTUText");
+            BTUText.text = ("Current BTU: " + GameManager.instance.CurrentBTU.ToString());
+        }
+
+
+
+
+
+
         if (GameManager.instance.InsulationMinigameComplete)
         {
             InsulationButton.SetActive(false);
@@ -19,14 +36,27 @@ public class Popups2 : MonoBehaviour
         }
         if (!GameManager.instance.InsulationMinigameComplete)
         {
-            if (GameManager.instance.WindowMinigameComplete && ThermalScript.instance.check == true)
+            if (currentScene.name == ("Level2"))
             {
-                InsulationButtonAnimator.SetTrigger("Highlight3");
+                    
+                if (GameManager.instance.WindowMinigameComplete && ThermalScript.instance.check == true)
+                {
+                    InsulationButtonAnimator.SetTrigger("Highlight3");
+                }
+                else if (GameManager.instance.WindowMinigameComplete && !ThermalScript.instance.check)
+                {
+                    InsulationButtonAnimator.ResetTrigger("Highlight3");
+                }
+                if (GameManager.instance.WindowMinigameComplete && ThermalScript.instance.check == true)
+                {
+                    InsulationButtonAnimator.SetTrigger("Highlight3");
+                }
+                else if (GameManager.instance.WindowMinigameComplete && !ThermalScript.instance.check)
+                {
+                    InsulationButtonAnimator.ResetTrigger("Highlight3");
+                }
             }
-            else if (GameManager.instance.WindowMinigameComplete && !ThermalScript.instance.check)
-            {
-                InsulationButtonAnimator.ResetTrigger("Highlight3");
-            }
+    
         }
         else if (GameManager.instance.InsulationMinigameComplete)
         {
