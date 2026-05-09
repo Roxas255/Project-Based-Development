@@ -6722,7 +6722,7 @@ MonoBehaviour:
   WindowQuestionPanel: {fileID: 764181128}
   WindowInfoPanel: {fileID: 1909205405}
   WindowQuestionText: {fileID: 332355612}
-  InsulationQuestionText: {fileID: 0}
+  InsulationQuestionText: {fileID: 1562179912}
   PipeQuestionText: {fileID: 136567420}
   HVACQuestionText: {fileID: 0}
   AfterWindowGamePopUp: {fileID: 775147086}

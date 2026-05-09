@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 
 public class PopupTextScript : MonoBehaviour
 {
@@ -86,46 +87,102 @@ public class PopupTextScript : MonoBehaviour
     }
     public void QuestionWrong()
     {
-        StartCoroutine(ChangeQuestionText("Incorrect. Try again."));
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
+        {
+            StartCoroutine(ChangeQuestionText("Incorrecto. Inténtalo de nuevo."));
+        }
+        else
+        {
+            StartCoroutine(ChangeQuestionText("Incorrect. Try again."));
+        }
     }
     public IEnumerator ChangeQuestionText(string newText)
     {
         Debug.Log("ChangedText");
         WindowQuestionText.text = newText;
         yield return new WaitForSeconds(1.5f);
-        WindowQuestionText.text = ("Where is the defect located?");
-    }   
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
+        {
+            WindowQuestionText.text = "¿Dónde está ubicado el defecto?";
+        }
+        else
+        {
+            WindowQuestionText.text = "Where is the defect located?";
+        }
+    }
     public void QuestionWrong2()
     {
-        StartCoroutine(ChangeQuestionText1("Incorrect. Try again."));
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
+        {
+            StartCoroutine(ChangeQuestionText1("Incorrecto. Inténtalo de nuevo."));
+        }
+        else
+        {
+            StartCoroutine(ChangeQuestionText1("Incorrect. Try again."));
+        }
     }
     public IEnumerator ChangeQuestionText1(string newText)
     {
         Debug.Log("ChangedText");   
         InsulationQuestionText.text = newText;
         yield return new WaitForSeconds(1.5f);
-        InsulationQuestionText.text = ("Where is the defect located?");
-    }   
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
+        {
+            InsulationQuestionText.text = "¿Dónde está ubicado el defecto?";
+        }
+        else
+        {
+            InsulationQuestionText.text = "Where is the defect located?";
+        }
+    }
     public void PipeQuestionWrong()
     {
-        StartCoroutine(ChangeQuestionText2("Incorrect. Try again."));
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
+        {
+            StartCoroutine(ChangeQuestionText2("Incorrecto. Inténtalo de nuevo."));
+        }
+        else
+        {
+            StartCoroutine(ChangeQuestionText2("Incorrect. Try again."));
+        }
     }
     public IEnumerator ChangeQuestionText2(string newText)
     {        
         Debug.Log("ChangedText");
         PipeQuestionText.text = newText;
         yield return new WaitForSeconds(1.5f);
-        PipeQuestionText.text = ("Where is the defect located?");
-    }   
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
+        {
+            PipeQuestionText.text = "¿Dónde está ubicado el defecto?";
+        }
+        else
+        {
+            PipeQuestionText.text = "Where is the defect located?";
+        }
+    }
     public void QuestionWrong4()
     {
-        StartCoroutine(ChangeQuestionText3("Incorrect. Try again."));
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
+        {
+            StartCoroutine(ChangeQuestionText3("Incorrecto. Inténtalo de nuevo."));
+        }
+        else
+        {
+            StartCoroutine(ChangeQuestionText3("Incorrect. Try again."));
+        }
     }
     public IEnumerator ChangeQuestionText3(string newText)
     {
         Debug.Log("ChangedText");
         HVACQuestionText.text = newText;
         yield return new WaitForSeconds(1.5f);
-        HVACQuestionText.text = ("Where is the defect located?");
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
+        {
+            HVACQuestionText.text = "¿Dónde está ubicado el defecto?";
+        }
+        else
+        {
+            HVACQuestionText.text = "Where is the defect located?";
+        }
     }   
 }
