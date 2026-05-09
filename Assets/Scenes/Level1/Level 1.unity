@@ -3664,7 +3664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -85, y: -117}
+  m_AnchoredPosition: {x: 26, y: -123}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &741769720
@@ -3748,14 +3748,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.47843137}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8375605174008269873, guid: 9658f422cdd11334b8016e18e5b8a645, type: 3}
+  m_Sprite: {fileID: 7216020789322620962, guid: a6148424c3d485e4abd408046f33289b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6742,6 +6742,7 @@ MonoBehaviour:
   InsulationButton: {fileID: 1464669688}
   PipeButton: {fileID: 741769718}
   HVACButton: {fileID: 0}
+  BTUText: {fileID: 0}
 --- !u!1 &1712502224
 GameObject:
   m_ObjectHideFlags: 0

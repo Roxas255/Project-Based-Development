@@ -108,7 +108,7 @@ public class HVACminigame : MonoBehaviour
 
         ventOpen = false;
 
-        // After closing vent, AC is still OFF
+        // After closing vent, AC is still off
         hvacImage.sprite = f2_ACOffClosed;
     }
 

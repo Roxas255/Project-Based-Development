@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 
 public class WindowLogic : MonoBehaviour
 {
@@ -94,18 +95,22 @@ public class WindowLogic : MonoBehaviour
                 {
                     accuracyText.text = "Accuracy: " + finalPercentage.ToString("F0") + "%";
                 }
-
-                if (finalscore != null)
-                {
-                    finalscore.text = "Energy Score Gained: " + finalTierPoints.ToString("F0");
-                }
-
-                //Debug.Log("Final Score: " + FinalScore);
-                //Debug.Log("Percentage: " + finalPercentage);
-                //Debug.Log("Tier Points: " + finalTierPoints);
-
-                //WindowScript.instance.gameFinished = false;
+                // Switching languages
+            if (LocalizationSettings.SelectedLocale.name == "Spanish (es)")
+            {
+                finalscore.text = "Puntuación de Energía Ganada: " + finalTierPoints.ToString("F0");
             }
+            else
+            {
+                finalscore.text = "Energy Score Gained: " + finalTierPoints.ToString("F0");
+            }
+
+            //Debug.Log("Final Score: " + FinalScore);
+            //Debug.Log("Percentage: " + finalPercentage);
+            //Debug.Log("Tier Points: " + finalTierPoints);
+
+            //WindowScript.instance.gameFinished = false;
+        }
         if (currentScoreText != null)
         {
             float livePercentage = 0f;
@@ -116,7 +121,14 @@ public class WindowLogic : MonoBehaviour
                 livePercentage = Mathf.Clamp(livePercentage, 0f, 100f);
             }
 
-            currentScoreText.text = "Current Score: " + livePercentage.ToString("F2") + "%";
+            if (LocalizationSettings.SelectedLocale.name == "Spanish (es)")
+            {
+                currentScoreText.text = "Puntuación Actual: " + livePercentage.ToString("F2") + "%";
+            }
+            else
+            {
+                currentScoreText.text = "Current Score: " + livePercentage.ToString("F2") + "%";
+            }
         }
 
 

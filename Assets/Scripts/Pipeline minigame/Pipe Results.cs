@@ -59,8 +59,8 @@ public class PipeResults : MonoBehaviour
 
             if (isSpanish)
             {
-                titleText.text = "Tuber�a completada";
-                scoreText.text = "Puntuaci�n de energ�a ganada: 15";
+                titleText.text = "Tubería completada";
+                scoreText.text = "Puntuación de energía ganada: 15";
             }
             else
             {
@@ -80,7 +80,7 @@ public class PipeResults : MonoBehaviour
             if (isSpanish)
             {
                 titleText.text = "Tarea fallida";
-                scoreText.text = "Puntuaci�n de energ�a ganada: 0";
+                scoreText.text = "Puntuación de energía ganada: 0";
             }
             else
             {
