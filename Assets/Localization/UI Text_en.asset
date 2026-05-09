@@ -158,6 +158,53 @@ MonoBehaviour:
     m_Localized: Credits
     m_Metadata:
       m_Items: []
+  - m_Id: 27871347312398336
+    m_Localized: '
+
+      Expected BTU: 60000
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27885194618310656
+    m_Localized: 'Single Family Home:
+
+      1200 square foot house
+
+      Built
+      in 1950
+
+
+
+      Location: Staten Island
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27889079915352064
+    m_Localized: No info yet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27894736722825216
+    m_Localized: 'Instructions:
+
+      Replace the dirty HVAC filter correctly.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27899117195202560
+    m_Localized: HVAC.....................................................
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27900185509597184
+    m_Localized: "Presented by Fuego LLC\n    \nIn association with CUNY Building
+      Energy Performance Lab\n \nSpecial Thank You to Doctor Michael Bobker\n\nProducer
+      - Matthew Lizardi\nLead Game Designer - Cas Ammerman\nGame Designer - Qixiang
+      Dong\nLead Programmer - Alejandro Martinez\nProgrammer - Raphael Casarez\nLead
+      Artist - Ethan \u201CRozco\u201D Orozco\nMusic - Chris Wingert\n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

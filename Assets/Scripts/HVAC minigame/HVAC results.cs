@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 
 public class HVACresults : MonoBehaviour
 {
@@ -29,20 +30,23 @@ public class HVACresults : MonoBehaviour
     {
         bool isCorrect = hvacMinigame.IsComplete();
         GameManager.instance.HvacMinigameComplete = true;
+        bool spanish = LocalizationSettings.SelectedLocale.Identifier.Code == "es";
+
         if (isCorrect)
         {
             pointsEarned = 5;
-            titleText.text = "HVAC Complete";
-            scoreText.text = "Energy Score Gained: 5";
-            GameManager.instance.HvacMinigameComplete = true;
 
+            titleText.text = spanish ? "HVAC completado" : "HVAC Complete";
+            scoreText.text = spanish ? "Puntuación de energía ganada: 5" : "Energy Score Gained: 5";
         }
         else
         {
             pointsEarned = 0;
-            titleText.text = "Task Failed";
-            scoreText.text = "Energy Score Gained: 0";
+
+            titleText.text = spanish ? "Tarea fallida" : "Task Failed";
+            scoreText.text = spanish ? "Puntuación de energía ganada: 0" : "Energy Score Gained: 0";
         }
+
 
         PlayerPrefs.SetFloat("HVACScore2", pointsEarned);
         PlayerPrefs.Save();

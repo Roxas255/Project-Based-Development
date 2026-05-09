@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 
 public class Popups2 : MonoBehaviour
 {
@@ -18,7 +19,14 @@ public class Popups2 : MonoBehaviour
         if (currentScene.name == "Level 2")
         {
             Debug.Log("UpdatedBTUText");
-            BTUText.text = ("Current BTU: " + GameManager.instance.CurrentBTU.ToString());
+            if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
+            {
+                BTUText.text = "BTU actual: " + GameManager.instance.CurrentBTU.ToString();
+            }
+            else
+            {
+                BTUText.text = "Current BTU: " + GameManager.instance.CurrentBTU.ToString();
+            }
         }
 
 
