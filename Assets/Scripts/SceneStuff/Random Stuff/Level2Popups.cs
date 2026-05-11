@@ -9,10 +9,28 @@ public class Level2Popups : MonoBehaviour
     public GameObject BTUPanel;
     public GameObject BTUInfoPanel;
     public GameObject Text2;
-  //  public GameObject 
+
+
+    public GameObject HVACbutton;
+    public GameObject PipeButton;
+
+    public static Level2Popups instance;
     void Start()
     {
+
+        instance = this;
+
         InitialText.SetActive(true);
+        if (GameManager.instance.checked4 == true && GameManager.instance.HVACWrong == true)
+        {
+            StartCoroutine(GameManager.instance.HvacWrongCheckOnOff());
+        }
+        if (GameManager.instance.checked3 == true && GameManager.instance == true)
+        {
+            StartCoroutine(GameManager.instance.PipeWrongCheckOnOff());
+            Debug.Log("PipeBUtton");
+            PipeButton.SetActive(true);
+        }
     }
 
     void Update()

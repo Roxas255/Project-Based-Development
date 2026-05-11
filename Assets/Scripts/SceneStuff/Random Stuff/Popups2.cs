@@ -18,7 +18,7 @@ public class Popups2 : MonoBehaviour
 
         if (currentScene.name == "Level 2")
         {
-            Debug.Log("UpdatedBTUText");
+            //Debug.Log("UpdatedBTUText");
             if (LocalizationSettings.SelectedLocale.Identifier.Code == "es")
             {
                 BTUText.text = "BTU actual: " + GameManager.instance.CurrentBTU.ToString();
@@ -71,7 +71,7 @@ public class Popups2 : MonoBehaviour
             return;
         }
 
-        if (GameManager.instance.HvacMinigameComplete)
+        if (GameManager.instance.HvacMinigameComplete && GameManager.instance.HVACcorrect)
         {
             HVACButton.SetActive(false);
         }

@@ -7208,6 +7208,8 @@ MonoBehaviour:
   BTUPanel: {fileID: 127664229}
   BTUInfoPanel: {fileID: 342482431}
   Text2: {fileID: 1140840568}
+  HVACbutton: {fileID: 160359898}
+  PipeButton: {fileID: 741769718}
 --- !u!1 &1712502224
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System.Collections;
 using NUnit.Framework;
 using TMPro;
 using UnityEditor.PackageManager.UI;
@@ -25,8 +26,9 @@ public class GameManager : MonoBehaviour
     public bool InsulationAbove97;
     public bool InsulationAbove90;
     public bool PipeCorrect;
+    public bool PipeWrong;
     public bool HVACcorrect;
-
+    public bool HVACWrong;
 
 
 
@@ -114,12 +116,15 @@ public class GameManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
 
         if (PipeCorrect)
-            {
-                CurrentBTU -= 4000;
-                checked3 = true;
-            }
-        //else if (PipeIncorrect)
-        //  CurrentBTU += 2000;
+        {
+            CurrentBTU -= 4000;
+            checked3 = true;
+        }
+        else if (PipeWrong)
+        {
+            CurrentBTU += 2000;
+            checked3 = true;
+        }
     }
     public void CheckHVACScore()
     {        
@@ -131,9 +136,31 @@ public class GameManager : MonoBehaviour
             CurrentBTU -= 6000;
             checked4 = true;
         }
-        //else if (HVACminigame.instance.correct == false)
-        //  CurrentBTU += 2000;
+        else if (HVACWrong)
+        {
+            CurrentBTU += 2000;
+            checked4 = true;
+        }
     }
+
+    public IEnumerator HvacWrongCheckOnOff()
+    {
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Check4 false ");
+        checked4 = false;
+        HVACWrong = false;
+        Debug.Log("True");
+        Level2Popups.instance.HVACbutton.SetActive(true);
+        Debug.Log("DONE");
+    }
+
+    public IEnumerator PipeWrongCheckOnOff()
+    {
+        yield return new WaitForSeconds(1f);
+        checked3 = false;
+        PipeWrong = false;
+    }
+
         
     public void ResetMinigameBools()
     {
@@ -155,10 +182,15 @@ public class GameManager : MonoBehaviour
         PipeCorrect = false;
         HVACcorrect = false;
 
+        PipeWrong = false;
+        HVACWrong = false;
+
         // Progression checks
         checked1 = false;
         checked2 = false;
         checked3 = false;
         checked4 = false;
     }
+
+
 }

@@ -37,14 +37,14 @@ public class HVACresults : MonoBehaviour
             pointsEarned = 5;
 
             titleText.text = spanish ? "HVAC completado" : "HVAC Complete";
-            scoreText.text = spanish ? "Puntuación de energía ganada: 5" : "Energy Score Gained: 5";
+            scoreText.text = spanish ? "Puntuaciï¿½n de energï¿½a ganada: 5" : "Energy Score Gained: 5";
         }
         else
         {
             pointsEarned = 0;
-
+            GameManager.instance.HVACWrong = true;
             titleText.text = spanish ? "Tarea fallida" : "Task Failed";
-            scoreText.text = spanish ? "Puntuación de energía ganada: 0" : "Energy Score Gained: 0";
+            scoreText.text = spanish ? "Puntuaciï¿½n de energï¿½a ganada: 0" : "Energy Score Gained: 0";
         }
 
 

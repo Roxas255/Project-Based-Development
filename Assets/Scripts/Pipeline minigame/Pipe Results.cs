@@ -76,7 +76,7 @@ public class PipeResults : MonoBehaviour
         else
         {
             pointsEarned = 0;
-
+            GameManager.instance.PipeWrong = true;
             if (isSpanish)
             {
                 titleText.text = "Tarea fallida";
