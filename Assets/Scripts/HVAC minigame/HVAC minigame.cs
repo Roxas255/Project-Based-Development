@@ -20,6 +20,9 @@ public class HVACminigame : MonoBehaviour
     public Sprite f4_VentOpenDirty;
     public Sprite f5_VentOpenEmpty;
     public Sprite f6_VentOpenClean;
+    [Header("Audio")]
+    public AudioSource greenConsoleSFX;
+    
 
     private bool acOn = true;
     private bool ventOpen = false;
@@ -38,7 +41,7 @@ public class HVACminigame : MonoBehaviour
         cleanFilterInserted = false;
 
         hvacImage.sprite = f1_ACOnClosed;
-
+        UpdateConsoleSound();
         // Dirty filter should not be dragged until the vent is open
         dirtyFilter.SetActive(false);
 
@@ -50,6 +53,7 @@ public class HVACminigame : MonoBehaviour
 
     public void ToggleAC()
     {
+        
         // Player should not turn AC on/off while vent is open
         if (ventOpen)
             return;
@@ -64,8 +68,21 @@ public class HVACminigame : MonoBehaviour
         {
             hvacImage.sprite = f2_ACOffClosed;
         }
+        UpdateConsoleSound();
 
-        
+    }
+    private void UpdateConsoleSound()
+    {
+        if (acOn)
+        {
+            if (!greenConsoleSFX.isPlaying)
+                greenConsoleSFX.Play();
+        }
+        else
+        {
+            if (greenConsoleSFX.isPlaying)
+                greenConsoleSFX.Stop();
+        }
     }
 
     public void OpenVent()
