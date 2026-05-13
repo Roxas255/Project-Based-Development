@@ -6691,9 +6691,9 @@ MonoBehaviour:
   spanishLines:
   - "Has completado con \xE9xito tu formaci\xF3n inicial."
   - "A continuaci\xF3n, se te asignar\xE1 una estructura residencial activa."
-  - "La eficiencia importa. As\xED que identifica y repara todos los defectos energ\xE9ticos
-    importantes."
-  - "Ahora, echemos un vistazo a los requisitos de BTU de la vivienda. Aqu\xED est\xE1n
+  - "La eficiencia es importante. As\xED que identifique y repare todos los defectos
+    energ\xE9ticos importantes."
+  - "Ahora, echemos un vistazo a los requisitos de BTU de la casa. Aqu\xED est\xE1n
     los detalles:"
   textSpeed: 0.065
   Panel: {fileID: 1885971492}

@@ -1487,8 +1487,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1473148683170230019, guid: 2dccc413a86803b4abb73ab2a3729a8c, type: 3}
       propertyPath: 'spanishLines.Array.data[0]'
-      value: "Esta pared no tiene aislamiento. La energ\xEDa se escapa, llena la
-        zona para mejorar la eficiencia energ\xE9tica del edificio."
+      value: "Esta pared no tiene aislamiento. La energ\xEDa est\xE1 escapando, llena
+        el \xE1rea para mejorar la competencia energ\xE9tica del edificio."
       objectReference: {fileID: 0}
     - target: {fileID: 6498120228470568105, guid: 2dccc413a86803b4abb73ab2a3729a8c, type: 3}
       propertyPath: m_Name

@@ -155,19 +155,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27857692537622528
-    m_Localized: "los t\xEDtulos de cr\xE9dito"
+    m_Localized: "Cr\xE9ditos"
     m_Metadata:
       m_Items: []
   - m_Id: 27871347312398336
     m_Localized: '
 
-      BTU esperado: 60.000
+      BTU previsto: 60.000
 
 '
     m_Metadata:
       m_Items: []
   - m_Id: 27885194618310656
-    m_Localized: "Casa unifamiliar:\r\nCasa de 1200 pies\r\ncuadrados Construida
+    m_Localized: "Vivienda unifamiliar:\r\nCasa de 1200 pies\r\ncuadrados Construida
       en 1950\r\n\r\n\r\nUbicaci\xF3n: Staten Island"
     m_Metadata:
       m_Items: []
@@ -185,12 +185,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27900185509597184
-    m_Localized: "Presentado por FUEGO LLC\n\nEn asociaci\xF3n con el Laboratorio
-      de Rendimiento Energ\xE9tico de Edificios de la CUNY\n\nAgradecimientos especiales
-      al doctor Michael Bobker\r\n\r\nproductor - Matthew Lizardi\r\ndise\xF1ador
-      principal del juego - Cas Ammerman\r\ndise\xF1ador de juegos - Qixiang Dong\r\nprogramador
-      principal - Alejandro Mart\xEDnez\r\nprogramador - Rafael Casarez\r\nartista
-      principal - Ethan \u201CRozco\u201D Orozco\r\nm\xFAsica - Chris Wingert"
+    m_Localized: "Presentado por Fuego LLC\n\r\nEn asociaci\xF3n con CUNY Building
+      Energy Performance Lab\n\r\nAgradecimiento especial al doctor Michael Bobker\"\n\r\nProductor
+      - Matthew Lizardi\r\nDise\xF1ador principal de juegos - Cas Ammerman\r\nDise\xF1ador
+      de juegos - Qixiang Dong\r\nProgramador principal - Alejandro Martinez\r\nProgramador
+      - Rafael Casarez\r\nArtista principal - Ethan \u201CRozco\u201D Orozco\r\nM\xFAsica
+      - Chris Wingert "
     m_Metadata:
       m_Items: []
   references:
