@@ -2219,7 +2219,7 @@ MonoBehaviour:
   normal: {fileID: 1718339622}
   thermal: {fileID: 2058548946}
   check: 0
-  thermalAudio: {fileID: 0}
+  thermalAudio: {fileID: 367386199}
 --- !u!82 &367386199
 AudioSource:
   m_ObjectHideFlags: 0
