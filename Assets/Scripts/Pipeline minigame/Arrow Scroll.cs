@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+
 public class ArrowScroll : MonoBehaviour
 {
     public Image tileTop;
@@ -7,8 +8,12 @@ public class ArrowScroll : MonoBehaviour
     public Image tileLowerMid;
     public Image tileBottom;
 
+    public AudioSource pipeAudio;
+
     public void ScrollUp()
     {
+        pipeAudio.Play();
+
         Sprite temp = tileTop.sprite;
 
         tileTop.sprite = tileUpperMid.sprite;
@@ -19,6 +24,8 @@ public class ArrowScroll : MonoBehaviour
 
     public void ScrollDown()
     {
+        pipeAudio.Play();
+
         Sprite temp = tileBottom.sprite;
 
         tileBottom.sprite = tileLowerMid.sprite;
