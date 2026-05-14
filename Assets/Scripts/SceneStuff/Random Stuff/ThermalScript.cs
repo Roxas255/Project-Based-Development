@@ -7,6 +7,7 @@ public class ThermalScript : MonoBehaviour
 
     public bool check;
     public static ThermalScript instance;
+    public AudioSource thermalAudio;
     void Start()
     {
         instance = this;
@@ -37,5 +38,10 @@ public class ThermalScript : MonoBehaviour
         {
             check = false;
         }
+    }
+
+    public void PlayThermalSound()
+    {
+        thermalAudio.Play();
     }
 }

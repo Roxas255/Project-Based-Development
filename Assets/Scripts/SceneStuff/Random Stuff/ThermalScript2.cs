@@ -11,6 +11,7 @@ public class ThermalScript2 : MonoBehaviour
     public Animator InsulationButtonAnimator;
     public bool check;
     public static ThermalScript2 instance;
+    public AudioSource thermalAudio;
     void Start()
     {
         instance = this;
@@ -59,5 +60,10 @@ public class ThermalScript2 : MonoBehaviour
     {
         WindowButton.SetActive(false);
         InsulationButton.SetActive(false);
+    }
+
+    public void PlayThermalSound()
+    {
+        thermalAudio.Play();
     }
 }

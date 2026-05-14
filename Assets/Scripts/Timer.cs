@@ -16,8 +16,12 @@ public class Timer : MonoBehaviour
 
     private bool timerStopped = false;
 
+    public AudioSource timerAudio;
+
     void Start()
     {
+        timerAudio.Play();
+
         if (frames.Length > 0 && image != null)
         {
             image.sprite = frames[0];
@@ -50,10 +54,14 @@ public class Timer : MonoBehaviour
             Debug.Log("Time Up! Minigame failed.");
             SceneManager.LoadScene("Level 1");
         }
+
+        
     }
 
     public void StopTimer()
     {
         timerStopped = true;
+
+        timerAudio.Stop();
     }
 }

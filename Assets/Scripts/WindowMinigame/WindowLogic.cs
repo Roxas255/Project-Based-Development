@@ -40,12 +40,15 @@ public class WindowLogic : MonoBehaviour
     public float FinalScore;
     public TextMeshProUGUI currentScoreText;
     public TextMeshProUGUI accuracyText;
+    public AudioSource sprayAudio;
     [Header("Score Saving")]
     public string scoreKey;
     private float timer = 0f;
     public static WindowLogic instance;
     
     public TextMeshProUGUI finalscore;
+
+    
     void Start()
     {
         unsealedPoints = new List<Transform>(WindowPoints);
@@ -61,41 +64,56 @@ public class WindowLogic : MonoBehaviour
         CalculateMouseSpeed();
         if (WindowSealer.instance != null && WindowSealer.instance.isDrawing == true)
         {
+            if (!sprayAudio.isPlaying)
+            {
+                sprayAudio.Play();
+            }
             //starts the functions of the game once you click anywhere on the screen
             CheckAccuracy();
             CheckSpeedPenalty();
+
+
+        }
+        else
+        {
+            if (sprayAudio.isPlaying)
+            {
+                sprayAudio.Stop();
+            }
+
+
         }
 
 
-           //final score is calculated by adding up how many seals you have sealed
-           //and subtracts points for moving too far from the seals 
-           //also subtracts points for moving too fast
-           //and subtracts even more points for losing points for too long
+            //final score is calculated by adding up how many seals you have sealed
+            //and subtracts points for moving too far from the seals 
+            //also subtracts points for moving too fast
+            //and subtracts even more points for losing points for too long
 
-        
+
             if (WindowScript.instance != null && WindowScript.instance.gameFinished == true)
+        {
+            FinalScore = GetFinalScore();
+
+            if (maxPossibleScore > 0f)
             {
-                FinalScore = GetFinalScore();
+                finalPercentage = (FinalScore / maxPossibleScore) * 100f;
+            }
+            else
+            {
+                finalPercentage = 0f;
+            }
 
-                if (maxPossibleScore > 0f)
-                {
-                    finalPercentage = (FinalScore / maxPossibleScore) * 100f;
-                }
-                else
-                {
-                    finalPercentage = 0f;
-                }
+            finalTierPoints = CalculateTierPoints(finalPercentage);
 
-                finalTierPoints = CalculateTierPoints(finalPercentage);
+            PlayerPrefs.SetFloat(scoreKey, finalTierPoints);
+            PlayerPrefs.Save();
 
-                PlayerPrefs.SetFloat(scoreKey, finalTierPoints);
-                PlayerPrefs.Save();
-
-                if (accuracyText != null)
-                {
-                    accuracyText.text = "Accuracy: " + finalPercentage.ToString("F0") + "%";
-                }
-                // Switching languages
+            if (accuracyText != null)
+            {
+                accuracyText.text = "Accuracy: " + finalPercentage.ToString("F0") + "%";
+            }
+            // Switching languages
             if (LocalizationSettings.SelectedLocale.name == "Spanish (es)")
             {
                 finalscore.text = "Puntuación de Energía Ganada: " + finalTierPoints.ToString("F0");
